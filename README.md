@@ -2,8 +2,6 @@
 
 Repositório das disciplinas do curso Tecnólogo em **Sistemas para Internet**, do Instituto Federal do Triângulo Mineiro, Campus Centro.
 
----
-
 ## 1º Período
 
 **&emsp;🌐 Projeto Web-Estático**
