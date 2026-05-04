@@ -1,0 +1,90 @@
+.menu1 {
+    border: 1px solid black;
+    width: 120px;
+    height: 40px;
+    background-image: url('../img/faceBlack.png');
+    background-repeat: no-repeat;
+    background-position: center 10px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.menu1:hover {
+    background-image: url('../img/face.png'); /*quando o css está fora da imagem*/
+}
+
+.menu2 {
+    border: 1px solid black;
+    width: 120px;
+    height: 40px;
+    background-image: url('../img/instaBlack.png');
+    background-repeat: no-repeat;
+    background-position: center 10px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.menu2:hover {
+    background-image: url('../img/insta.png'); /*quando o css está fora da imagem*/
+}
+
+.menu3 {
+    border: 1px solid black;
+    width: 120px;
+    height: 40px;
+    background-image: url('../img/mapsBlack.png');
+    background-repeat: no-repeat;
+    background-position: center 10px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.menu3:hover {
+    background-image: url('../img/maps.png'); /*quando o css está fora da imagem*/
+}
+
+.menu4 {
+    border: 1px solid black;
+    width: 120px;
+    height: 40px;
+    background-image: url('../img/mapsBlack.png');
+    background-repeat: no-repeat;
+    background-position: center 10px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.menu4:hover {
+    background-image: url('../img/maps.png'); /*quando o css está fora da imagem*/
+}
+
+.menu5 {
+    border: 1px solid black;
+    width: 120px;
+    height: 40px;
+    background-image: url('../img/youtubeBlack.png');
+    background-repeat: no-repeat;
+    background-position: center 10px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.menu5:hover {
+    background-image: url('../img/youtube.png'); /*quando o css está fora da imagem*/
+}
+
+ul {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+}
+
+ul li {
+    border: 1px solid black;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    font-family: Oswald;
+}
