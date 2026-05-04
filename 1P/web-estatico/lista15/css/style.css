@@ -83,8 +83,8 @@
 
     .menu4:hover {
         background-image: url('../img/twitter.png');
-        color: rgb(85, 172, 238);
-        border-bottom: 5px solid rgb(85, 172, 238);
+        color: yellow;
+        border-bottom: 5px solid yellow;
     }
 
     /*Youtube*/
