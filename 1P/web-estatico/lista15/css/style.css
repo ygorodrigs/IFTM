@@ -1,0 +1,137 @@
+* {
+    margin: 0px;
+    padding: 0px;
+
+    .plus-jakarta-sans-<uniquifier> {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: <weight>;
+        font-style: normal;
+}
+
+    /*Facebook*/
+
+    .menu1 {
+        width: 120px;
+        height: 40px;
+        background-image: url('../img/faceBlack.png');
+        background-repeat: no-repeat;
+        background-position: center 10px;
+        text-align: center;
+        padding-top: 50px;
+
+    }
+
+    .menu1:hover {
+        background-image: url('../img/face.png');
+        /*quando o css está fora da imagem*/
+        color: rgb(80, 130, 238);
+        border-bottom: 5px solid rgb(80, 130, 238);
+
+    }
+
+    /*Instagram*/
+
+    .menu2 {
+        width: 120px;
+        height: 40px;
+        background-image: url('../img/instaBlack.png');
+        background-repeat: no-repeat;
+        background-position: center 10px;
+        text-align: center;
+        padding-top: 50px;
+
+    }
+
+    .menu2:hover {
+        background-image: url('../img/insta.png');
+        color: rgb(221, 163, 200);
+        border-bottom: 5px solid rgb(221, 163, 200);
+    }
+
+    /*Maps*/
+
+    .menu3 {
+        width: 120px;
+        height: 40px;
+        background-image: url('../img/mapsBlack.png');
+        background-repeat: no-repeat;
+        background-position: center 10px;
+        text-align: center;
+        padding-top: 50px;
+
+    }
+
+    .menu3:hover {
+        background-image: url('../img/maps.png');
+        color: rgb(63, 238, 180);
+        border-bottom: 5px solid rgb(63, 238, 180);
+    }
+
+    /*Twitter*/
+
+    .menu4 {
+        width: 120px;
+        height: 40px;
+        background-image: url('../img/twitterBlack.png');
+        background-repeat: no-repeat;
+        background-position: center 10px;
+        text-align: center;
+        padding-top: 50px;
+
+    }
+
+    .menu4:hover {
+        background-image: url('../img/twitter.png');
+        color: rgb(85, 172, 238);
+        border-bottom: 5px solid rgb(85, 172, 238);
+    }
+
+    /*Youtube*/
+
+    .menu5 {
+        width: 120px;
+        height: 40px;
+        background-image: url('../img/youtubeBlack.png');
+        background-repeat: no-repeat;
+        background-position: center 10px;
+        text-align: center;
+        padding-top: 50px;
+
+    }
+
+    .menu5:hover,
+    a:hover {
+        background-image: url('../img/youtube.png');
+        color: red;
+        border-bottom: 5px solid red;
+
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        padding: 0%;
+        justify-content: center;
+        background-color: black;
+        margin-top: 5px;
+        padding-top: 5px;
+    }
+
+    ul li {
+        list-style: none;
+
+    }
+
+    a {
+        text-decoration: none; /*tirar o sublinhado*/
+        font-family: Oswald;
+        border-bottom: 5px solid black;
+    }
+
+    a:link,
+    a:visited {
+        display: inline-block;
+        color: white;
+        padding-bottom: 5px solid black;
+    }
