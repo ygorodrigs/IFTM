@@ -1,0 +1,60 @@
+/* ============================================================
+   1. RESET GLOBAL 
+   Aplicado a TODOS os elementos (*) para evitar bugs de layout.
+   ============================================================ */
+* {
+    margin: 0px;            /* Remove o espaçamento externo padrão do navegador */
+    padding: 0px;           /* Remove o espaçamento interno padrão do navegador */
+    box-sizing: border-box; /* Garante que 'width' inclua padding e border, evitando que a caixa "estoure" */
+}
+
+/* ============================================================
+   2. CONTAINERS E ESTRUTURA (PAI)
+   Propriedades que organizam os elementos internos.
+   ============================================================ */
+.container-flex {
+    display: flex;          /* Ativa o modo Flexbox: alinha itens filhos em linha ou coluna */
+    flex-direction: row;    /* Define a direção dos filhos: 'row' (lado a lado) ou 'column' (empilhados) */
+}
+
+.texto-em-colunas {
+    column-count: 3;        /* Divide o conteúdo de texto automaticamente em 3 colunas (estilo jornal) */
+}
+
+/* ============================================================
+   3. COMPONENTES INTERATIVOS (BOTÕES, LINKS, CARDS)
+   Focado em estética e feedback para o usuário.
+   ============================================================ */
+.botao-customizado, input[type="button"] {
+    cursor: pointer;        /* Muda a seta do mouse para a "mãozinha" de clique */
+    border-radius: 15px;    /* Arredonda os cantos do elemento */
+    text-decoration: none;  /* Remove o sublinhado padrão de links (<a>) */
+    display: inline-block;  /* Permite definir altura/largura sem quebrar a linha do texto */
+    
+    /* Preparação para Animação */
+    transition: all 0.5s;   /* Suaviza mudanças (como cor ou tamanho) em 0.5 segundos */
+}
+
+/* Estado de HOVER (Passar o mouse) */
+.botao-customizado:hover {
+    box-shadow: 5px 1px 15px gray; /* Cria uma sombra, dando efeito de profundidade/elevação */
+    transform: scale(0.9);         /* Diminui levemente o tamanho do elemento ao interagir */
+}
+
+/* ============================================================
+   4. ELEMENTOS VISUAIS E IMAGENS
+   ============================================================ */
+.banner-perfil {
+    /* Define uma imagem de fundo. O '../' sobe uma pasta para achar o diretório de imagens */
+    background-image: url('../img/face.png'); 
+    background-size: cover;    /* Dica extra: faz a imagem ocupar todo o espaço sem distorcer */
+    background-position: center;
+    height: 200px;
+}
+
+main section:nth-of-type(odd) { /* seleciona  e formata a seção impar do main*/
+    background-color: rgb(255, 255, 255);
+}
+main section:nth-of-type(even) { /* seleciona a seção par do main*/
+    background-color: green;
+    color: white;
