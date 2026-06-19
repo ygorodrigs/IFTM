@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>O Laço que Abraça</title>
+
+        <link rel="stylesheet" href="css/style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Plus+Jakarta+Sans:wght@200..800&family=Work+Sans:wght@100..900&display=swap"
+            rel="stylesheet">
+    </head>
+    <body>
+
+        <header class="header-mobile">
+            <a href="https://www.amazon.com.br/La%C3%A7o-que-Abra%C3%A7a-Relatos-Soropositivos-ebook/dp/B084TSL9RT" class="adquira-livro-mobile">
+                <img src="img/carrinho.png" alt="Carrinho"
+                    class="carrinho-mob-icone">
+                <span>ADQUIRA O LIVRO</span>
+            </a>
+
+            <div class="menu-topo-mobile">Menu</div>
+
+            <input type="checkbox" id="menu-controle" class="menu-checkbox">
+
+            <label for="menu-controle" class="menu-toggle"
+                aria-label="Abrir menu">
+                <span class="risco-menu"></span>
+                <span class="risco-menu"></span>
+                <span class="risco-menu"></span>
+            </label>
+
+            <nav class="nav-menu">
+                <label for="menu-controle" class="close-menu">&times;</label>
+                <div class="menu-mobile">
+                    <div>
+                        <img src="img/logo-menu-preto.png" alt="Logo do site"
+                            class="logo-menu">
+                    </div>
+                    <div>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li class="item-retratil-mob">
+                                <details>
+                                    <summary>Perfis<span
+                                            class="setinha"></span></summary>
+                                    <div class="submenu-mob">
+                                        <p class="submenu-titulo">Explore as
+                                            trajetórias abaixo.</p>
+                                        <p class="submenu-desc-mob"></p>
+                                        <div class="perfis-grid-mob">
+                                            <a href="#" class="perfil-card-mob">
+                                                <img src="img/menu-morgana.png"
+                                                    alt="Morgana"
+                                                    class="perfil-foto-mob">
+                                                <span
+                                                    class="perfil-nome-mob">Morgana</span>
+                                            </a>
+                                            <a href="#" class="perfil-card-mob">
+                                                <img src="img/menu-jota.png"
+                                                    alt="Jota"
+                                                    class="perfil-foto-mob">
+                                                <span
+                                                    class="perfil-nome-mob">Jota</span>
+                                            </a>
+                                            <a href="#" class="perfil-card-mob">
+                                                <img src="img/menu-gloria.png"
+                                                    alt="Glória"
+                                                    class="perfil-foto-mob">
+                                                <span
+                                                    class="perfil-nome-mob">Glória</span>
+                                            </a>
+                                            <a href="#" class="perfil-card-mob">
+                                                <img src="img/menu-joao.png"
+                                                    alt="João"
+                                                    class="perfil-foto-mob">
+                                                <span
+                                                    class="perfil-nome-mob">João</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </details>
+                            </li>
+                            <li><a href="#">Extra</a></li>
+                            <li><a href="#">Serviços</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <header class="header-desktop">
+            <nav class="nav-fixo">
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <img src="img/inicio.png" alt class="botao-inicio">
+                            <span>INÍCIO</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.amazon.com.br/La%C3%A7o-que-Abra%C3%A7a-Relatos-Soropositivos-ebook/dp/B084TSL9RT">
+                            <img src="img/carrinho.png" alt
+                                class="botao-inicio">
+                            <span>ADQUIRA O LIVRO</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav class="nav2">
+                <a href="/index.html"><img src="img/logo-menu-preto.png" alt
+                        class="img-menu2"></a>
+                <ul>
+                    <li class="item-retratil">
+                        <a href="pagina-perfis.html"
+                            class="menu-gatilho">PERFIS</a>
+
+                        <div class="submenu">
+                            <p class="submenu-desc">Explore as trajetórias
+                                abaixo:</p>
+
+                            <div class="perfis-grid">
+                                <a href="/perfis.html#morgana" class="perfil-card">
+                                    <img src="img/menu-morgana.png"
+                                        alt="Morgana" class="perfil-foto">
+                                    <span class="perfil-nome">Morgana</span>
+                                </a>
+                                <a href="/perfis.html#jota" class="perfil-card">
+                                    <img src="img/menu-jota.png" alt="Jota"
+                                        class="perfil-foto">
+                                    <span class="perfil-nome">Jota</span>
+                                </a>
+                                <a href="/perfis.html#gloria" class="perfil-card">
+                                    <img src="img/menu-gloria.png" alt="Glória"
+                                        class="perfil-foto">
+                                    <span class="perfil-nome">Glória</span>
+                                </a>
+                                <a href="/perfis.html#joao" class="perfil-card">
+                                    <img src="img/menu-joao.png" alt="João"
+                                        class="perfil-foto">
+                                    <span class="perfil-nome">João</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="/extra.html">EXTRA</a></li>
+                    <li><a href="/servicos.html">SERVIÇOS</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+
+        </main>
+        <footer></footer>
+
+    </body>
+</html>
