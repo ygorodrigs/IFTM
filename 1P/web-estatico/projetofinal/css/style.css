@@ -282,7 +282,7 @@ section:nth-of-type(even) {
 .section-evento p,
 .section-leia p,
 .section-leia h2,
-.section-leia h3 {
+.section-leia p {
     padding: 20px;
     line-height: 23px;
     text-align: justify;
@@ -445,7 +445,7 @@ section:nth-of-type(even) {
     color: #333;
 }
 
-.container-leia {
+/* .container-leia {
     display: flex;
     flex-direction: row;
 }
@@ -454,7 +454,24 @@ section:nth-of-type(even) {
     width: 100px;
 }
 
+.section-leia h2 {
+    text-align: center;
+} */
 
+.section-leia img {
+    width: 40%;
+}
+
+.section-leia .container-leia {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.section-leia h4 {
+    text-align: left;
+    padding: 10px 0px 20px 20px;
+}
 
 
 @media (min-width: 768px) {
@@ -712,7 +729,7 @@ section:nth-of-type(even) {
 
     .section-abertura h1,
     .section-abertura p {
-        padding: 20px;
+        /* padding: 20px; */
         line-height: 25px;
     }
 
