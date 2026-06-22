@@ -1,0 +1,214 @@
+/* ==========================================================================
+   1. RESET UNIVERSAL & TIPOGRAFIA
+   (Cobrado em 100% das provas para zerar o comportamento padrão do navegador)
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Crucial: impede que padding/borda quebrem o tamanho dos elementos */
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #000000;
+}
+
+/* ==========================================================================
+   2. ESTRUTURA DO MENU (HEADER & NAV)
+   (Padrão do professor: Inline-block nos links para aceitarem padding corretamente)
+   ========================================================================== */
+header nav ul {
+    background-color: #FFD88F;
+    text-align: center;      /* Alinhamento mobile padrão */
+    display: flex;           /* Usado em alguns simulados para flexibilidade */
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;        /* Remove as bolinhas da lista */
+}
+
+header nav ul li {
+    display: inline-block;   /* Mantém os itens um ao lado do outro */
+}
+
+header nav ul li a {
+    display: block;          /* Ou inline-block. Obriga o link a aceitar paddings verticais */
+    padding: 20px 30px;
+    color: #000000;
+    text-decoration: none;   /* Remove o sublinhado padrão */
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;        /* Suaviza o efeito de hover */
+}
+
+/* Pseudo-classes de Interação (Hover) */
+header nav ul li a:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   3. O CONTAINER FLEXBOX (O segredo do layout do professor)
+   (Mobile-First: Empilhado no celular, vira linha no Computador)
+   ========================================================================== */
+.container {
+    display: flex;
+    flex-direction: column; /* Mobile: um embaixo do outro */
+    gap: 20px;              /* Espaçamento automático entre os blocos filhos */
+    width: 100%;            /* Ocupa tudo no mobile */
+    padding: 30px;
+}
+
+/* Divisão de colunas por porcentagem dentro do Flexbox */
+.duas-colunas .container > div {
+    width: 100%; /* No mobile vira 100% */
+}
+
+.tres-colunas .container > div {
+    width: 100%; /* No mobile vira 100% */
+}
+
+/* ==========================================================================
+   4. ESTILIZAÇÃO DE ELEMENTOS GERAIS (SEÇÕES, BOTÕES, TEXTOS)
+   ========================================================================== */
+section {
+    width: 100%;
+    padding: 40px;
+    text-align: center; /* Centraliza títulos e botões por padrão */
+}
+
+/* Seletores Avançados (Filho Direto '>') */
+section > div {
+    margin: auto; /* Centraliza blocos na tela */
+}
+
+/* Alinhamento de textos */
+section p {
+    text-align: justify; /* O professor exige textos justificados nas seções */
+    margin: 20px 0;
+}
+
+section h1, section h2, section h3 {
+    margin: 20px 0;
+    color: #FF5200;
+}
+
+/* Botões padrões das provas */
+section button {
+    padding: 10px 20px;
+    width: 150px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    margin: 10px;
+    cursor: pointer; /* Transforma a seta do mouse na mãozinha de clique */
+}
+
+/* Classes utilitárias de cores para botões */
+.btnPreto { background-color: #000000; }
+.btnAzul  { background-color: #00003b; }
+
+section button:hover {
+    background-color: #FF5200; /* Ambos mudam para laranja no hover */
+    color: #FFFFFF;
+}
+
+/* Imagens responsivas */
+section img {
+    width: 100%;       /* Impede que a imagem passe do tamanho da div dela */
+    max-width: 400px;  /* Evita que cresça demais em telas grandes */
+    height: auto;
+}
+
+section img:hover {
+    cursor: pointer;
+}
+
+/* Imagem de Fundo (Banner/Topo) */
+.imgApresentacao {
+    background-image: url('../img/topo.png');
+    height: 300px;
+    background-size: cover;       /* Preenche todo o espaço sem distorcer */
+    background-position: center;  /* Centraliza a imagem no corte */
+    background-repeat: no-repeat;
+}
+
+/* Detalhes expansíveis (<details> e <summary>) */
+.section_celulares details, 
+.viaje-conosco details {
+    text-align: justify;
+}
+
+.section_celulares summary, 
+.viaje-conosco summary {
+    color: #FF5200;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+/* ==========================================================================
+   5. PSEUDO-CLASSES ESTRUTURAIS (O "Efeito Zebra" do Simulado Uber)
+   (Pinta seções alternadas automaticamente sem precisar criar classes para elas)
+   ========================================================================== */
+section:nth-of-type(odd) {
+    background-color: #FFFFFF;       /* Seções ímpares ficam brancas */
+}
+
+section:nth-of-type(even) {
+    background-color: #DBDBDB;       /* Seções pares ficam cinzas */
+}
+
+/* Alvo específico por posição */
+.container div:nth-child(2) {
+    text-align: center;              /* Modifica apenas o segundo elemento filho */
+}
+
+/* ==========================================================================
+   6. FOOTER (RODAPÉ)
+   ========================================================================== */
+footer {
+    background-color: #000000;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 30px;
+}
+
+/* ==========================================================================
+   7. RESPONSIVIDADE (MEDIA QUERY) - DESKTOP (telas acima de 768px)
+   (Aqui o layout "muda de chave" para computadores)
+   ========================================================================== */
+@media screen and (min-width: 768px) {
+    
+    /* Alinhamento do Menu para a Direita */
+    header nav ul {
+        justify-content: flex-end; 
+    }
+
+    /* O Container deixa de ser coluna e vira linha (elementos lado a lado) */
+    .container {
+        flex-direction: row;
+        width: 1200px;            /* Define a largura máxima do site no PC */
+        margin: auto;             /* Centraliza o site na tela do PC */
+        gap: 40px;
+    }
+
+    /* Redefinição das colunas no Computador */
+    .duas-colunas .container > div {
+        width: 50%;               /* 2 colunas perfeitas de 50% */
+    }
+
+    .tres-colunas .container > div {
+        width: 33.33%;            /* 3 colunas perfeitas de 33.33% */
+    }
+
+    /* Forçador de Largura (Usado pelo professor no Simulado 1) */
+    section > div {
+        width: 1200px !important;  /* O !important garante que nenhuma regra anterior quebre isso */
+        margin: auto;
+    }
+}
