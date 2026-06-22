@@ -36,7 +36,7 @@ html, body {
     /* font-weight: bold; */
 }
 
-.carrinho-mob-icone {
+.carrinho-mobile-icone {
     width: 14px;
     height: auto;
 }
@@ -93,7 +93,7 @@ html, body {
     gap: 10px; 
 }
 
-.item-retratil-mob summary {
+.item-retratil-mobile summary {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -107,11 +107,11 @@ html, body {
     user-select: none;
 }
 
-.item-retratil-mob summary::-webkit-details-marker {
+.item-retratil-mobile summary::-webkit-details-marker {
     display: none;
 }
 
-.item-retratil-mob summary .setinha {
+.item-retratil-mobile summary .setinha {
     display: inline-block;
     width: 8px; 
     height: 8px;
@@ -121,7 +121,7 @@ html, body {
     transition: transform 0.2s ease;
 }
 
-.item-retratil-mob details[open] summary .setinha {
+.item-retratil-mobile details[open] summary .setinha {
     transform: rotate(-135deg);
 }
 
@@ -179,7 +179,7 @@ html, body {
     padding-left: 10px; 
 }
 
-.submenu-mob {
+.submenu-mobile {
     padding: 10px 5px;
     text-align: center;
     width: 100%;
@@ -192,7 +192,7 @@ html, body {
     margin-bottom: 4px;
 }
 
-.submenu-desc-mob {
+.submenu-desc-mobile {
     color: #666666;
     font-size: 13px; 
     margin-bottom: 12px;
@@ -216,14 +216,14 @@ html, body {
     justify-self: center; 
 }
 
-.perfis-grid-mob {
+.perfis-grid-mobile {
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
     gap: 10px 15px;
     width: 100%;
 }
 
-.perfil-card-mob {
+.perfil-card-mobile {
     display: flex !important; 
     align-items: center;
     gap: 8px; 
@@ -234,27 +234,33 @@ html, body {
     border-bottom: none !important; 
 }
 
-.perfil-card-mob:hover .perfil-nome-mob {
+.perfil-card-mobile:hover .perfil-nome-mobile {
     color: rgb(165, 40, 43); 
 }
 
-.perfil-foto-mob {
+.perfil-foto-mobile {
     width: 38px; 
     height: 38px;
     object-fit: cover;
     border-radius: 50%; 
 }
 
-.perfil-nome-mob {
+.perfil-nome-mobile {
     font-size: 14px;
     font-weight: 500;
     color: #333333;
     text-align: left;
 }
 
-.section-img img {
-    width: 100%;
+section:nth-of-type(odd) {
+    background-color: white;
+    color:#333333;
 }
+
+section:nth-of-type(even) {
+    background-color: rgb(165, 40, 43);
+    color: white;
+} 
 
 .section-abertura {
     display: flex;
@@ -262,18 +268,29 @@ html, body {
     align-items: center;
 }
 
-.section-abertura .info-abertura {
+.section-abertura .info-abertura,
+.section-inicio {
     order: 2;
     text-align: justify;
 }
 
-    .section-abertura h1,
-    .section-abertura p {
-        padding: 20px;
-        line-height: 23px;
+.section-abertura h1,
+.section-abertura p,
+.section-inicio h2,
+.section-inicio p
+.section-evento h2,
+.section-evento p,
+.section-leia p,
+.section-leia h2,
+.section-leia h3 {
+    padding: 20px;
+    line-height: 23px;
+    text-align: justify;
     }
 
-.section-abertura p {
+.section-abertura p,
+.section-inicio p,
+.section-evento p {
     padding: 20px;
 }
 
@@ -288,6 +305,11 @@ html, body {
     /* padding: 0px 10px; */
 }
 
+/* .section-inicio span {
+    background-color: white;
+    color: rgb(165, 40, 43);
+} */
+
 .section-abertura img {
     order: 1;
     width: 90%;
@@ -296,9 +318,143 @@ html, body {
     filter: drop-shadow(5px 10px 8px rgba(0, 0, 0, 0.3));
 }
 
-.section-abertura h1 {
+.section-abertura h1, 
+.section-inicio h2 {
     text-align: center;
 }
+
+.section-inicio a {
+    color: white;
+}
+
+.section-inicio  h2 {
+    padding-top: 50px;
+}
+
+/* .section2 {
+    padding: 40px;
+    /* background-image: ; */
+/* } */ 
+
+/* .section2 h2,
+.section2 p {
+    line-height: 25px;
+    padding: 5px 10px;
+    text-align: justify;
+    color: white;
+}
+
+.section2 a {
+    color: white;
+} */
+
+
+/* .section-introducao {
+    width: 1200px;
+    margin: auto;
+    padding: 20px 70px;
+    background-color: rgb(165, 40, 43);
+    color: white;
+} */
+
+/* .section-introducao p {
+    line-height: 23px;
+    text-align: left;
+    margin: 20px 0px;
+    padding-left: 10px;
+    padding-right: 0px;
+} */
+
+/* .section-introducao a {
+    color: #333333;
+    text-decoration: none;
+    border-bottom: 3px solid rgb(220, 91, 93);
+} */
+
+/* .section-introducao {
+    margin-top: -40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+} */
+
+/* .section-introducao h2 {
+    margin-top: 10px;
+} */
+
+
+/* .section-introducao .nota-rodape-img {
+    font-size: 10px;
+    padding: 0px 10px 0px 290px;
+    text-align: left;
+    margin-top: -90px;
+} */
+
+/* .section-leia {
+    
+} */
+
+/* Container que envolve o carrossel */
+.slide {
+  display: flex;
+  gap: 20px; /* Espaço entre os cards */
+  overflow-x: auto; /* Ativa a barra de rolagem horizontal */
+  padding: 20px 0;
+  
+  /* Ativa o efeito magnético no container */
+  scroll-snap-type: x mandatory; 
+  
+  /* Esconde a barra de rolagem feia no Chrome/Safari/Firefox */
+  scrollbar-width: none; 
+}
+.slide::-webkit-scrollbar {
+  display: none; 
+}
+
+/* Estilo de cada Card individual */
+.card {
+  flex: 0 0 280px; /* Não deixa o card encolher e define a largura fixa dele */
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  
+  /* Alinha o card magneticamente quando o scroll parar */
+  scroll-snap-align: start; 
+}
+
+/* Estilo da Imagem dentro do Card */
+.card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+.section-evento .foto-evento {
+    display: none;
+}
+
+.section-evento .legenda-img {
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: -25px;
+}
+
+.section-evento a {
+    color: #333;
+}
+
+.container-leia {
+    display: flex;
+    flex-direction: row;
+}
+
+.section-leia .container-leia img {
+    width: 100px;
+}
+
+
 
 
 @media (min-width: 768px) {
@@ -361,15 +517,20 @@ html, body {
         margin-right: 8px; 
     }
 
-    .nav2 {
+    .nav-desktop,
+    .section-inicio {
+        padding: 30px;
+    }
+
+    .nav-desktop {
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding: 30px;
+        /* padding: 30px; */
         position: relative; 
     }
 
-    .nav2 ul {
+    .nav-desktop ul {
         padding: 0px 0px 0px 30px;
         list-style: none;
         display: flex;
@@ -377,12 +538,12 @@ html, body {
         align-items: center;
     }
 
-    .nav2 ul li {
+    .nav-desktop ul li {
         display: inline-block;
         padding: 10px 15px; 
     }
 
-    .nav2 ul li a {
+    .nav-desktop ul li a {
         text-decoration: none;
         color: black;
         font-size: 14px;
@@ -393,7 +554,7 @@ html, body {
         transition: all 0.3s ease; 
     }
 
-    .nav2 ul li a:hover {
+    .nav-desktop ul li a:hover {
         border-color: rgb(165, 40, 43); 
         color: rgb(165, 40, 43);        
     }
@@ -561,6 +722,7 @@ html, body {
 
     .section-abertura p {
         padding: 0px 0px 0px 100px;
+        text-align: left;
     }
 
     .section-abertura .info-abertura h1 {
@@ -582,7 +744,80 @@ html, body {
         width: 450px;
         padding: 0px 50px 0px 0px;
         margin-top: -160px;
+        margin-bottom: -20px;
         filter: drop-shadow(5px 10px 8px rgba(0, 0, 0, 0.3));
+    }
 
+    .section-inicio h2,
+    .section-inicio p {
+        line-height: 25px;
+        padding: 10px;
+        text-align: justify;
+    }
+
+    .section-inicio a {
+        color: white;
+    }
+
+    .section-evento {
+        display: flex !important;
+        flex-direction: row !important;
+        padding: 30px !important;
+        /* align-items: center; */
+    }
+
+    .section-evento img {
+        margin-top: -60px;
+    }
+
+    .section-evento p {
+        /* padding: 0px 100px 0px 20px !important; */
+        line-height: 25px !important;
+        margin-top: 60px !important;
+        text-align: left;
+        margin-right: 150px;
+    }
+
+    .section-evento a {
+        color: #333;
+    }
+
+    .section-evento figcaption {
+        font-size: 12px !important;
+        font-style: italic !important;
+        margin-top: -110px !important;
+        margin-left: 280px !important;
+    }
+
+    .slide-evento,
+    .legenda-img {
+        display: none;
+    }
+
+    /* .section-evento .botaoContrapartida {
+        display: flex;
+        flex-direction: row;
+        margin-left: 20px;
+        justify-content: center;
+        padding: 50px 200px 0px 0px;
+        gap: 15px;
+    } */
+
+    /* .section-evento button a {
+        color: white !important;
+        text-decoration: none;
+    } */
+
+    .section-evento .foto-evento {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section-evento .foto-evento line {
+        padding: 0px !important;
+        font-size: 10px;
+        line-height: 12px !important;
+        margin-top: -100px !important;
+        margin-left: 290px !important;
     }
 }
