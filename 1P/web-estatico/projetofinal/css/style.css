@@ -385,8 +385,26 @@ footer a {
     color: #333;
 }
 
+/* ==========================================================
+   CONFIGURAÇÕES PARA TELAS MAIORES (TABLETS E COMPUTADORES)
+   ========================================================== */
 @media (min-width: 768px) {
     
+    main {
+        width: 100%;
+    }
+
+    .container-interno {
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+    }
+
+    .container-interno.col-unico {
+        display: block;
+    }
+
     .header-mobile {
         display: none;
     }
@@ -397,12 +415,12 @@ footer a {
 
     .nav-fixo {
         background-color: rgb(165, 40, 43);
-        position: fixed; /* Fixa o elemento na tela */
+        position: fixed; 
         top: 0;
         left: 0;
-        z-index: 9999;   /* Garante que fica por cima de tudo */
+        z-index: 9999;   
         width: 100%;
-        height: 42px;    /* Definimos uma altura exata para conseguir calcular o espaço do próximo elemento */
+        height: 42px;    
     }
 
     .nav-fixo ul {
@@ -450,13 +468,13 @@ footer a {
         padding: 30px;
     }
 
-    .nav-desktop {
+     .nav-desktop {
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding: 30px;
+        padding: 60px 0px 0px 50px; /* Diminuído o padding de cima e de baixo (era 30px) */
         position: relative; 
-        margin-top: 42px; /* Esta margem joga o menu branco exatamente para baixo da barra vermelha! */
+        margin-top: 10px;   /* Diminuído a distância do nav-fixo (era 42px) */
     }
 
     .nav-desktop ul {
@@ -625,50 +643,55 @@ footer a {
         transition: color 0.3s ease;
     }
 
+    /* CORREÇÃO DA SECÇÃO ABERTURA (Adeus espaço em branco) */
     .section-abertura {
-        flex-direction: row;
-        align-items: flex-start;
+        display: flex !important;
+        width: 100%;
+        background-color: #ffffff;
+    }
+
+    .section-abertura .container-interno {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 40px;
+        padding: 10px 20px 50px 20px !important; /* Mudado o topo para 10px (era 50px) */
     }
 
     .section-abertura .info-abertura {
-        order: 0;
-        text-align: left;
-    }
-
-    .section-abertura h1,
-    .section-abertura p {
-        line-height: 25px;
+        order: 1 !important; /* Texto fica na esquerda */
+        text-align: left !important;
+        flex: 1;
     }
 
     .section-abertura h1 {
-        margin-top: 30px;
+        margin-top: 0 !important; /* Remove o topo esquisito */
+        text-align: left !important;
+        padding: 0 0 20px 0 !important;
+        line-height: 35px !important;
+        letter-spacing: 1.5px;
     }
 
     .section-abertura p {
-        padding: 0 0 0 100px;
-        text-align: left;
+        padding: 0 !important; /* Remove o recuo exagerado que jogava o texto pro lado */
+        text-align: justify !important;
+        line-height: 25px !important;
     }
 
-    .section-abertura .info-abertura h1 {
-        line-height: 30px;
-        letter-spacing: 1.5px;
-        text-align: center;
-        padding: 0 0 20px 0;
+    .section-abertura img {
+        order: 2 !important; /* Livro fica na direita */
+        width: 100% !important;
+        max-width: 400px !important; /* Tamanho controlado do livro */
+        margin: 0 !important; /* Adeus margem negativa esquisita */
+        padding: 0 !important;
+        filter: drop-shadow(5px 10px 8px rgba(0, 0, 0, 0.3));
     }
 
     .section-abertura span {
         background-color: rgb(165, 40, 43);
         color: white;
-        padding: 0 10px;
-    }
-
-    .section-abertura img {
-        order: 0;
-        width: 450px;
-        padding: 0 50px 0 0;
-        margin-top: -160px;
-        margin-bottom: -20px;
-        filter: drop-shadow(5px 10px 8px rgba(0, 0, 0, 0.3));
+        padding: 0 5px;
     }
 
     .section-inicio h2,
@@ -682,30 +705,30 @@ footer a {
         color: white;
     }
 
+    /* AJUSTE E ALINHAMENTO DA SECÇÃO EVENTO */
     .section-evento {
         display: flex;
         flex-direction: row;
         align-items: center; 
-        justify-content: center; 
-        gap: 50px; 
-        padding: 60px 30px;
-        max-width: 1200px; 
-        margin: 0 auto; 
+        justify-content: space-between; 
+        gap: 40px; 
+        padding: 60px 20px;
     }
 
     .section-evento img {
-        margin-top: -60px;
+        margin-top: 0 !important;
+    }
+
+    .texto-evento {
+        flex: 1;
     }
 
     .section-evento p {
         line-height: 25px;
-        margin-top: -30px;
-        text-align: left;
-        margin-right: 150px;
-    }
-
-    .section-evento a {
-        color: #333;
+        padding-top: 20%;
+        margin-top: 0 !important;
+        text-align: justify;
+        margin-right: 0 !important;
     }
 
     .section-evento figcaption {
@@ -713,11 +736,8 @@ footer a {
         font-style: italic;
         text-align: center;
         color: #666;
-        margin-top: -100px; 
-        /* margin-right: -550px; */
-        /* padding: 20px; */
-        margin-left: 300px; 
-        /* border: 2px solid yellow; */
+        margin-top: 10px !important; 
+        margin-left: 0 !important; 
     }
 
     .slide-evento,
@@ -729,8 +749,10 @@ footer a {
         display: flex;
         flex-direction: column;
         align-items: center; 
+        flex: 1;
     }
 
+    /* SECÇÃO LEIA */
     .section-leia h2 {
         padding-top: 50px;
     }
@@ -748,11 +770,6 @@ footer a {
         display: flex;
         flex-direction: row;
         justify-content: center;
-    }
-
-    .section-leia .container-biblioteca .biblioteca {
-        width: 100%;
-        height: auto;
     }
 
     .section-leia .container-biblioteca .col-bib {
@@ -787,11 +804,6 @@ footer a {
         justify-content: center;
     }
 
-    .section-leia .container-digital .digital {
-        width: 100%;
-        height: auto;
-    }
-
     .section-leia .container-digital .col-amazon {
         width: 80%;
         display: flex;
@@ -812,18 +824,30 @@ footer a {
     
     .digital, 
     .biblioteca {
-        width: 45% !important;
-        align-items: center !important;
+        width: 100% !important;
+        max-width: 150px;
+        height: auto;
+    }
+
+   .section-leia button:hover {
+        background-color: white;
+        border-radius: 999px;
+        width: 150px;
+        padding: 15px;
+        text-align: center;
+        margin: auto;
+        border: none;
     }
 
     footer {
         background-image: url('../img/footer-img.png');
         width: 100%;  
-        margin-top: -90px; 
+        /* Mudado de -90px fixo para um valor dinâmico baseado na tela */
+        margin-top: -6vw; 
         background-repeat: no-repeat;
         background-position: top center;
         background-size: 100% auto; 
-        padding-top: 100px; 
+        padding-top: 8vw; /* Ajusta o espaçamento interno superior proporcionalmente */
         padding-bottom: 20px;
         display: flex;
         flex-direction: column;
