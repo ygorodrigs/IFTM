@@ -19,11 +19,13 @@ html, body {
     text-align: justify;
 }
 
+/* Inicio do header */
+
 .header-desktop {
     display: none;
 }
 
-header .header-mobile {
+.header-mobile {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -42,7 +44,7 @@ header .header-mobile {
     font-size: 11px;
 }
 
-.carrinho-mobile-icone {
+.header-mobile .carrinho-mobile-icone {
     width: 14px;
     height: auto;
 }
@@ -254,7 +256,8 @@ section:nth-of-type(even) {
     order: 2;
 }
 
-.section-abertura .info-abertura h1 {
+.section-abertura .info-abertura h1,
+.container-perfis h1 {
     line-height: 30px;
     letter-spacing: 1.5px;
 }
@@ -367,11 +370,52 @@ section:nth-of-type(even) {
     padding-bottom: 100px;
 }
 
+.container-perfis p,
+/* .container-perfis hr, */
+.container-perfis h2,
+.container-perfis h4,
+.container-perfis img {
+    /* border: 2px solid yellow; */
+    padding: 10px 0px; 
+}
+
 .container-perfis {
     display: flex;
     flex-direction: column;
-    margin-top: 130px;
+    margin-top: 20px;
     width: 100%;
+    gap: 10px;
+}
+
+.container-perfis h1 {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    /* padding: 0px 0px 50px 0px; */
+}
+
+.container-perfis hr {
+    /* border: 6px solid yellow; */
+    display: none;
+}
+
+.container-perfis span {
+    margin: 30px;
+}
+
+/* hr {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    /* border: 2px solid red; 
+    width: 90%;
+    margin: auto;
+} 
+*/
+
+.container-perfis > div > p {
+    width: 90%;
+    margin: auto;
+    line-height: 23px !important;
 }
 
 /* Aplicamos o recuo de 20px APENAS nos textos e títulos do perfil */
@@ -387,6 +431,18 @@ section:nth-of-type(even) {
     gap: 15px !important; /* Reduz o espaço gigante entre foto e texto */
     width: 100% !important;
 }
+
+.container-perfis .capitulos > p {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+}
+
+.container-perfis .capitulos h2 {
+    text-align: center;
+    /* border: 2px solid red; */
+}
+
 
 .previa img {
     width: 100% !important; /* No celular a imagem ocupa a largura disponível */
@@ -921,13 +977,19 @@ footer a {
     .container-perfis > div {
         display: flex;
         flex-direction: column;
-        gap: 30px !important;
+        gap: 10px !important;
+    }
+
+    .container-perfis > div > p {
+        width: 100%;
+        margin: auto;
+        line-height: auto;
     }
 
     .container-perfis .capitulos {
         display: flex;
         flex-direction: column; /* Alinhado para coluna se quiser o H2 em cima do P, ou mude para row */
-        gap: 20px !important;
+        /* gap: 20px !important; */
         align-items: center;
         justify-content: center;
     }
@@ -935,9 +997,13 @@ footer a {
     .container-perfis .previa {
         display: flex;
         flex-direction: row;
-        gap: 20px !important;
+        /* gap: 20px !important; */
         width: 100% !important;
     }
+
+    .container-perfis h1 {
+        padding: none;
+
 
     /* Isso diz ao navegador: aplique apenas nas imagens que estão dentro do bloco de prévia */
     .previa img {
@@ -949,13 +1015,13 @@ footer a {
     .container-perfis .previa .textos {
         display: flex;
         flex-direction: column;
-        gap: 15px !important;
+        /* gap: 15px !important; */
     }
 
     .entenda {
         display: flex;
         flex-direction: column;
-        gap: 10px !important;
+        /* gap: 10px !important; */
         background-color: rgb(165, 40, 43);
         color: white;
         padding: 20px !important;
@@ -973,7 +1039,6 @@ footer a {
 
     .container-perfis p {
         line-height: 25px;
-
     }
 
     
