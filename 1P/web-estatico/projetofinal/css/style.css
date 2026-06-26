@@ -23,7 +23,7 @@ html, body {
     display: none;
 }
 
-.header-mobile {
+header .header-mobile {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,11 +54,11 @@ html, body {
     margin-right: 15px; 
 }
 
-.menu-checkbox {
+header .menu-checkbox {
     display: none;
 }
 
-.menu-toggle {
+header .menu-toggle {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -68,14 +68,14 @@ html, body {
     cursor: pointer;
 }
 
-.menu-toggle .risco-menu {
+header .menu-toggle .risco-menu {
     width: 100%;
     height: 3px;
     background-color: #fff;
     transition: 0.3s;
 }
 
-.nav-menu {
+header .nav-menu {
     position: fixed;
     top: 0;
     left: 5%; 
@@ -134,7 +134,7 @@ html, body {
     transform: translateY(0);
 }
 
-.close-menu {
+header .close-menu {
     position: absolute;
     top: 15px;
     right: 15px; 
@@ -370,51 +370,67 @@ section:nth-of-type(even) {
 .container-perfis {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    /* margin: 0% 90%; */
+    margin-top: 130px;
+    width: 100%;
 }
 
-/* .container-perfis h1,
+/* Aplicamos o recuo de 20px APENAS nos textos e títulos do perfil */
 .container-perfis h2,
-.container-perfis p,
-.container-perfis h4 {
-    padding: 20px;
-    line-height: 23px;
-    text-align: justify;
-} */
+.container-perfis .previa {
+    padding: 0 20px;
+    box-sizing: border-box;
+}
 
-/* .container-perfis p {
-    text-align: justify;
-} */
+.container-perfis .previa {
+    display: flex;
+    flex-direction: column-reverse; /* No mobile, a imagem fica abaixo ou acima conforme o fluxo */
+    gap: 15px !important; /* Reduz o espaço gigante entre foto e texto */
+    width: 100% !important;
+}
 
-/* .container-perfis img {
-    display: block;
-    width: 60%;
-    margin: auto;
-} */
+.previa img {
+    width: 100% !important; /* No celular a imagem ocupa a largura disponível */
+    max-width: 300px; /* Impede que ela fique gigante se a tela for um pouco maior */
+    margin: 0 auto; /* Centraliza a foto */
+    height: auto !important;
+    object-fit: contain !important;
+}
 
-/* .container-perfis h1,
-.container-perfis h2 {
-    text-align: center !important;
-    margin: 0px 10px;
-    line-height: 30px;
-} */
+.container-perfis .previa .textos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px !important; /* Espaço sutil entre os parágrafos */
+}
 
-/* .container-perfis hr {
-    width: 90%;
-    margin: auto;
-} */
-
-/* .container-perfis .linhas {
-    width: 90%;
-    margin: auto;
-    padding: 0px 20px;
-} */
-
-/* .container-perfis .entenda {
+.entenda {
+    display: flex;
+    flex-direction: column;
+    gap: 12px !important; /* Espaço interno do bloco Entenda */
     background-color: rgb(165, 40, 43);
     color: white;
-} */
+    padding: 20px !important;
+    border-radius: 4px;
+}
+
+.linha {
+    margin-bottom: 15px;
+    width: 100% !important;
+}
+
+.container-perfis p {
+    line-height: 24px;
+    font-size: 15px;
+    text-align: justify;
+}
+
+/* O bloco vermelho agora ocupa 100% da largura, igualzinho ao do index */
+.container-perfis .entenda {
+    width: 100%;
+    padding: 20px !important; /* O espaço fica do lado de dentro */
+    background-color: rgb(165, 40, 43);
+    color: white;
+    box-sizing: border-box;
+}
 
 
 
@@ -458,7 +474,7 @@ footer a {
         display: block;
     }
 
-    .header-mobile {
+    header .header-mobile {
         display: none;
     }
 
@@ -961,7 +977,6 @@ footer a {
     }
 
     
-
     footer {
         background-image: url('../img/footer-img.png');
         width: 100%;  
