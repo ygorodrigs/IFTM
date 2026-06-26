@@ -4,9 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>O Laço que Abraça</title>
-
         <link rel="stylesheet" href="css/style.css">
-
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link
@@ -15,166 +13,385 @@
     </head>
     <body>
 
-        <header class="header-mobile">
-            <a
-                href="https://www.amazon.com.br/La%C3%A7o-que-Abra%C3%A7a-Relatos-Soropositivos-ebook/dp/B084TSL9RT"
-                class="adquira-livro-mobile">
-                <img src="img/carrinho.png" alt="Carrinho"
-                    class="carrinho-mob-icone">
-                <span>ADQUIRA O LIVRO</span>
-            </a>
+        <header>
+            <div class="header-mobile">
+                <a
+                    href="https://www.amazon.com.br/La%C3%A7o-que-Abra%C3%A7a-Relatos-Soropositivos-ebook/dp/B084TSL9RT"
+                    class="adquira-livro-mobile">
+                    <img src="img/carrinho.png" alt="Carrinho"
+                        class="carrinho-mobile-icone">
+                    <span>ADQUIRA O LIVRO</span>
+                </a>
 
-            <div class="menu-topo-mobile">Menu</div>
+                <div class="menu-topo-mobile">Menu</div>
+                <input type="checkbox" id="menu-controle" class="menu-checkbox">
 
-            <input type="checkbox" id="menu-controle" class="menu-checkbox">
+                <label for="menu-controle" class="menu-toggle"
+                    aria-label="Abrir menu">
+                    <span class="risco-menu"></span>
+                    <span class="risco-menu"></span>
+                    <span class="risco-menu"></span>
+                </label>
 
-            <label for="menu-controle" class="menu-toggle"
-                aria-label="Abrir menu">
-                <span class="risco-menu"></span>
-                <span class="risco-menu"></span>
-                <span class="risco-menu"></span>
-            </label>
-
-            <nav class="nav-menu">
-                <label for="menu-controle" class="close-menu">&times;</label>
-                <div class="menu-mobile">
-                    <div>
-                        <img src="img/logo-menu-preto.png" alt="Logo do site"
-                            class="logo-menu">
-                    </div>
-                    <div>
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li class="item-retratil-mob">
-                                <details>
-                                    <summary>Perfis<span
-                                            class="setinha"></span></summary>
-                                    <div class="submenu-mob">
-                                        <p class="submenu-titulo">Explore as
-                                            trajetórias abaixo.</p>
-                                        <p class="submenu-desc-mob"></p>
-                                        <div class="perfis-grid-mob">
-                                            <a href="#" class="perfil-card-mob">
-                                                <img src="img/menu-morgana.png"
-                                                    alt="Morgana"
-                                                    class="perfil-foto-mob">
-                                                <span
-                                                    class="perfil-nome-mob">Morgana</span>
-                                            </a>
-                                            <a href="#" class="perfil-card-mob">
-                                                <img src="img/menu-jota.png"
-                                                    alt="Jota"
-                                                    class="perfil-foto-mob">
-                                                <span
-                                                    class="perfil-nome-mob">Jota</span>
-                                            </a>
-                                            <a href="#" class="perfil-card-mob">
-                                                <img src="img/menu-gloria.png"
-                                                    alt="Glória"
-                                                    class="perfil-foto-mob">
-                                                <span
-                                                    class="perfil-nome-mob">Glória</span>
-                                            </a>
-                                            <a href="#" class="perfil-card-mob">
-                                                <img src="img/menu-joao.png"
-                                                    alt="João"
-                                                    class="perfil-foto-mob">
-                                                <span
-                                                    class="perfil-nome-mob">João</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </details>
-                            </li>
-                            <li><a href="#">Extra</a></li>
-                            <li><a href="#">Serviços</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
-
-        <header class="header-desktop">
-            <nav class="nav-fixo">
-                <ul>
-                    <li>
-                        <a href="index.html">
-                            <img src="img/inicio.png" alt class="botao-inicio">
-                            <span>INÍCIO</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="https://www.amazon.com.br/La%C3%A7o-que-Abra%C3%A7a-Relatos-Soropositivos-ebook/dp/B084TSL9RT">
-                            <img src="img/carrinho.png" alt
-                                class="botao-inicio">
-                            <span>ADQUIRA O LIVRO</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-
-            <nav class="nav2">
-                <a href="/index.html"><img src="img/logo-menu-preto.png" alt
-                        class="img-menu2"></a>
-                <ul>
-                    <li class="item-retratil">
-                        <a href="pagina-perfis.html"
-                            class="menu-gatilho">PERFIS</a>
-
-                        <div class="submenu">
-                            <p class="submenu-desc">Explore as trajetórias
-                                abaixo:</p>
-
-                            <div class="perfis-grid">
-                                <a href="/perfis.html#morgana"
-                                    class="perfil-card">
-                                    <img src="img/menu-morgana.png"
-                                        alt="Morgana" class="perfil-foto">
-                                    <span class="perfil-nome">Morgana</span>
-                                </a>
-                                <a href="/perfis.html#jota" class="perfil-card">
-                                    <img src="img/menu-jota.png" alt="Jota"
-                                        class="perfil-foto">
-                                    <span class="perfil-nome">Jota</span>
-                                </a>
-                                <a href="/perfis.html#gloria"
-                                    class="perfil-card">
-                                    <img src="img/menu-gloria.png" alt="Glória"
-                                        class="perfil-foto">
-                                    <span class="perfil-nome">Glória</span>
-                                </a>
-                                <a href="/perfis.html#joao" class="perfil-card">
-                                    <img src="img/menu-joao.png" alt="João"
-                                        class="perfil-foto">
-                                    <span class="perfil-nome">João</span>
-                                </a>
-                            </div>
+                <nav class="nav-menu">
+                    <label for="menu-controle" class="close-menu">×</label>
+                    <div class="menu-mobile">
+                        <div>
+                            <img src="img/logo-menu-preto.png"
+                                alt="Logo do site" class="logo-menu">
                         </div>
-                    </li>
-                    <li><a href="/extra.html">EXTRA</a></li>
-                    <li><a href="/servicos.html">SERVIÇOS</a></li>
-                </ul>
-            </nav>
+                        <div>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li class="item-retratil-mobile">
+                                    <details>
+                                        <summary>Perfis <span
+                                                class="setinha"></span></summary>
+                                        <div class="submenu-mobile">
+                                            <p class="submenu-titulo">Explore as
+                                                trajetórias abaixo.</p>
+                                            <p class="submenu-desc-mobile"></p>
+                                            <div class="perfis-grid-mobile">
+                                                <a href="#"
+                                                    class="perfil-card-mobile">
+                                                    <img
+                                                        src="img/menu-morgana.png"
+                                                        alt="Morgana"
+                                                        class="perfil-foto-mobile">
+                                                    <span
+                                                        class="perfil-nome-mobile">Morgana</span>
+                                                </a>
+                                                <a href="#"
+                                                    class="perfil-card-mobile">
+                                                    <img src="img/menu-jota.png"
+                                                        alt="Jota"
+                                                        class="perfil-foto-mobile">
+                                                    <span
+                                                        class="perfil-nome-mobile">Jota</span>
+                                                </a>
+                                                <a href="#"
+                                                    class="perfil-card-mobile">
+                                                    <img
+                                                        src="img/menu-gloria.png"
+                                                        alt="Glória"
+                                                        class="perfil-foto-mobile">
+                                                    <span
+                                                        class="perfil-nome-mobile">Glória</span>
+                                                </a>
+                                                <a href="#"
+                                                    class="perfil-card-mobile">
+                                                    <img src="img/menu-joao.png"
+                                                        alt="João"
+                                                        class="perfil-foto-mobile">
+                                                    <span
+                                                        class="perfil-nome-mobile">João</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </details>
+                                </li>
+                                <li><a href="#">Extra</a></li>
+                                <li><a href="#">Serviços</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="header-desktop">
+                <nav class="nav-fixo">
+                    <ul>
+                        <li>
+                            <a href="index.html">
+                                <img src="img/inicio.png" alt="Início"
+                                    class="botao-inicio">
+                                <span>INÍCIO</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.amazon.com.br/La%C3%A7o-que-Abra%C3%A7a-Relatos-Soropositivos-ebook/dp/B084TSL9RT">
+                                <img src="img/carrinho.png" alt="Carrinho"
+                                    class="botao-inicio">
+                                <span>ADQUIRA O LIVRO</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <nav class="nav-desktop">
+                    <a href="/index.html"><img src="img/logo-menu-preto.png"
+                            alt="Logo" class="img-menu2"></a>
+                    <ul>
+                        <li class="item-retratil">
+                            <a href="/perfis.html"
+                                class="menu-gatilho">PERFIS</a>
+                            <div class="submenu">
+                                <p class="submenu-desc">Explore as trajetórias
+                                    abaixo:</p>
+                                <div class="perfis-grid">
+                                    <a href="/perfis.html#morgana"
+                                        class="perfil-card">
+                                        <img src="img/menu-morgana.png"
+                                            alt="Morgana" class="perfil-foto">
+                                        <span class="perfil-nome">Morgana</span>
+                                    </a>
+                                    <a href="/perfis.html#jota"
+                                        class="perfil-card">
+                                        <img src="img/menu-jota.png" alt="Jota"
+                                            class="perfil-foto">
+                                        <span class="perfil-nome">Jota</span>
+                                    </a>
+                                    <a href="/perfis.html#gloria"
+                                        class="perfil-card">
+                                        <img src="img/menu-gloria.png"
+                                            alt="Glória" class="perfil-foto">
+                                        <span class="perfil-nome">Glória</span>
+                                    </a>
+                                    <a href="/perfis.html#joao"
+                                        class="perfil-card">
+                                        <img src="img/menu-joao.png" alt="João"
+                                            class="perfil-foto">
+                                        <span class="perfil-nome">João</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="/extra.html">EXTRA</a></li>
+                        <li><a href="/servicos.html">SERVIÇOS</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
 
         <main>
+            <section class="container-perfis ">
+                <div>
+                    <h1>As vozes d'O Laço que Abraça</h1>
+        
+                    <p>
+                        Por trás de cada dado e estatística sobre o HIV, existem vidas cheias de recomeços, dores, superações e, acima de tudo, humanidade. Nesta página, abrimos espaço para que você conheça de perto a jornada de quatro pessoas  que transformaram o diagnóstico em um ponto de partida para novas formas de viver e se relacionar.
+                    </p>
+                    <p>
+                        Abaixo, você encontrará uma prévia de cada perfil presente no livro <b>O Laço que Abraça</b> (Morgana, Jota, Glória e João). Cada relato acompanha a seção <i>"Entenda"</i>, trazendo um olhar ciêntifico, de forma simplificada, sobre as realidades vividas por eles. 
+                        </p> 
+                    <hr>
+                    <div class="capitulos" id="morgana">
+                        <h2>Cap. 1 — Escolhas</h2>
+                        <p><i>Para <b>Morgana</b> a vida é feito de escolhas. 8 ou 80, sempre
+                            muito intesamente. Uma pessoa marcante que conseguiu se
+                            reiventar e transformar sua própria vida após um
+                            diagnóstico complicado.</i></p>
+                    </div>
+                   
+                    <div class="previa">
+                        <img src="/img/perfis-morgana.png" alt>
 
-            <section>
-                <h2 id="morgana">Morgana</h2>
-            </section>
-            <section>
-                <h2 id="jota">Jota</h2>
-            </section>
-            <section>
-                <h2 id="gloria">Glória</h2>
-            </section>
-            <section>
-                <h2 id="joao">João</h2>
-            </section>
+                        <div class="textos">
+                            <h4>Leia uma prévia</h4>
 
+                            <p>O ano era 1994. Já era madrugada quando um cliente an
+                                tigo, sumido há meses, apareceu na pensão procurando por
+                                Morgana. “Alto, moreno e magro”, foi assim que Iolanda des
+                                creveu o homem que acabara de chegar. Era um velho conhe
+                                cido que Morgana encontrava pelas ruas, mas aquele homem
+                                nunca havia procurado por ela na pensão. Ele não parecia
+                                bem.
+                                Mas ela não questionou a mudança de aparência dele, apenas
+                                deduziu que fosse consequência do uso de drogas e o convi
+                                dou a subir para o quarto.</p>
+                            <p>Os dois fumavam um cigarro, deitados na cama com lençóis
+                                coloridos, conversando como amigos. Mesmo sem o conhecer
+                                direito, Morgana confiava bastante naquele homem. Confiava.</p>
+                            <p>Dias antes, uma das garotas da pensão havia morrido em
+                                consequência da Aids. Curioso com a situação, o cliente fez
+                                várias perguntas a Morgana. Durante o vai e vem do assunto,
+                                ela
+                                sentiu necessidade de questionar sobre a aparência do
+                                cliente.
+                                A pele manchada não parecia sinônimo de saúde. A resposta
+                                foi direta e num tom sereno, como se o que ele dissesse
+                                fosse
+                                algo que Morgana já devesse saber: “a mesma coisa que a sua
+                                colega”. Morgana se assustou. Seu cliente havia acabado de
+                                assumir ter o vírus e eles não haviam usado preservativo.
+                                “Ele
+                                ainda teve coragem de falar que não estaria visitando uma
+                                travesti se não tivesse na merda. Quase o matei nesse dia”.</p>
+                            </div>
+                    </div>
+
+                    <div class="entenda">
+                            <h4>Entenda</h4>
+                            <p>Ao ler a história de Morgana algumas expressões e temas 
+                            podem não ter ficado claros ou suficientemente explicados. 
+                            Exposta desde muito cedo à realidade das trabalhadoras se
+                            xuais, Morgana foi “carimbada” por um cliente. O ato que ganhou nome específico acontece quando alguém decide expor, 
+                            com intenção de contaminar, outra pessoa ao HIV. Na época 
+                            envolta de obscuridade como era a temática da Aids, Morgana 
+                            não procurou a justiça. Mas você deve estar se perguntando: e 
+                            hoje? No cenário atual, a legislação brasileira, assim como indicado pela ONU, Organização das Nações Unidas, não apresenta uma tipificação específica para esses casos. No entanto, é possível perceber uma tendência da justiça brasileira em 
+                            enquadrar o ato de carimbar como o crime de lesão corporal 
+                            gravíssima, com reclusão de dois a oito anos. </p>
+                    </div>
+                    <hr class="linha">
+
+                </div>
+                
+                <div>
+                    <div class="capitulos">
+                        <h2>Cap. 2 — Aprendizado</h2>
+                        <p><i>Aprender com sua própria história. E rever seus próprio preconceitos. Esse foi um dos pontos pertinentes na vida positiva de <b>Jota</b>, mais um que compartilhou um pouco sobre sua vida para O Laço que Abraça.</i></p>
+                    </div>
+                   
+                    <div class="previa">
+                        <div class="textos">
+                            <h4>Leia uma prévia</h4>
+                            <p>
+                               (...)
+                            </p>
+                            <p>Ao se aproximar, o médico foi sucinto: “Os resultados dos 
+                                exames comprovaram que o senhor é soropositivo e já desenvolveu a Aids”. Jota sentiu o coração palpitar forte e não conseguia pensar em nenhuma palavra. Estava em choque. A traição, 
+                                em 1998, foi a primeira memória que veio em sua mente.
+                            </p>
+                            <p> 
+                                Cristina voltava do banheiro pelo longo corredor e, enquanto ela se aproximava, Jota tentava se recompor. Ao vê-la se 
+                                aproximar, o médico perguntou: “O senhor gostaria que eu contasse a ela?”. Jota foi rápido na resposta: “Eu mesmo conto”. 
+                            <p>Ainda na Medicina, Jota não quis esperar. Contou no 
+                                mesmo minuto para sua esposa que era soropositivo. Assim 
+                                como ele, Cristina não estava preparada para aquela notícia. 
+                                Ela se deu conta que aquele diagnóstico era resultado de uma 
+                                traição, e a preocupação que tinha com o marido desapareceu. 
+                                O caminho de volta para casa foi em silêncio. 
+                            </p>
+                            <p>
+                                 Jota começou o tratamento imediatamente. No início, os 
+                                efeitos colaterais do coquetel eram fortes. E, em casa, ele não 
+                                tinha muita ajuda. 
+                            </p>
+                                <p>A comunicação era nula. Ele tinha dificuldade de se ali
+                                mentar e isso só piorava o quadro imunológico. O preconcei
+                                to da esposa o machucava. “Se eu encostasse nela, para pedir 
+                                ajuda ou algo assim, ela saia correndo e ia limpar com álcool”. 
+                                A raiva e a angústia passaram a morar com Jota, Cristina e a 
+                                filha caçula.</p>
+                                
+                            </p>
+                        </div>
+                        <img src="/img/perfis-jota.png" alt>
+
+                    </div>
+
+                    <div class="entenda">
+                            <h4>Entenda</h4>
+                            <p>Jota, assim como muitos homens heterossexuais, sempre se distanciou da questão da Aids, só fazendo o exame por indicação médica quando já apresentava as marcas da síndrome em seu corpo. Principalmente como já vimos no capítulo anterior, por causa das determinações obsoletas de “grupos de risco” que transformavam a Aids em uma realidade distante do homem heterossexual. (...) O diagnóstico de Aids significa que, naquele momento, o organismo de Jota ou apresentava uma contagem de células LT-CD4+ muito baixa (menor de 350 células por mm³) ou um quadro clínico de infecções graves. Essas doenças são várias, entre as mais comuns estão as infecções recorrentes ocasionadas por fungos; diarreia crônica, com perda de peso; pneumonia; e tuberculose.   </p>
+
+                    </div>
+
+                     <hr class="linha">
+
+                </div>
+
+                <div>
+                    <div class="capitulos">
+                        <h2>Cap. 3 — Compreensão</h2>
+                        <p><i>Mulher, mãe e batalhadora. <b>Glória</b> mostra como foi sua história com o HIV e como a negação do seu diagnóstico impactou sua vida.</i></p>
+                    </div>
+                   
+                    <div class="previa">
+                        <img src="/img/perfis-gloria.png" alt>
+
+                        <div class="textos">
+                            <h4>Leia uma prévia</h4>
+
+                            <p>Percebendo uma melhora, Glória negava que era soropositiva, para ela havia um erro, os exames e o médico estavam errados. Esse foi o seu comportamento por vários anos, 
+                            a negação do diagnóstico e as interrupções no tratamento 
+                            contribuíram para a evolução do quadro de Aids e o desenvolvimento de infecções oportunistas. </p>
+                            <p>A recusa em tomar os medicamentos ocorreu várias vezes, ela os deixava no canto e ignorava a importância de usá--los. Isso trouxe consequências e Glória passou por sete internações. “A última foi em 2005, que dei AVC”. Durante certo 
+                            tempo, teve que andar de cadeiras de rodas, logo depois de 
+                            bengala. Mais tarde, no mesmo ano, a aceitação veio totalmente, sem recaídas. </p>
+                            <p>Mesmo a aceitação foi marcada pela ideia de que morreria logo. Seus diálogos com a psicóloga do ambulatório sempre 
+                            se repetiam. Perguntava: “Vou ter oito dias, oito meses, oito 
+                            anos?”. Afirmava que estava pronta para receber uma data de 
+                            sua morte. A psicóloga a venceu pela repetição. “Dona Glória, 
+                            a senhora não vai morrer de Aids” e reforçava a ideia de que 
+                            qualquer um estava sujeito à morte em todos os momentos da 
+                            vida. Por fim, entendeu. </p>
+                            </div>
+                    </div>
+
+                    <div class="entenda">
+                            <h4>Entenda</h4>
+                            <p>A principal causa do diagnóstico da Aids de Glória foram 
+                            as interrupções e a realização  do tratamento de forma incorreta. Algumas pesquisas indicam que seguir orientações médicas e fazer o tratamento de forma correta não é a realidade 
+                            para todos soropositivos. Em Belo Horizonte, pesquisadores da 
+                            Universidade Federal de Minas Gerais (UFMG) checaram que 
+                            23% dos diagnosticados não aderiram ao tratamento, e 32% 
+                            declararam não seguir corretamente as prescrições de seus 
+                            médicos. Informações que podem ser comprovados nos dados 
+                            das farmácias e ambulatórios, nos quais os registros apontaram 
+                            que 47% dos soropositivos não voltaram a pegar a medicação 
+                            com a regularidade necessária, e 28% abandonaram o coquetel logo no primeiro ano de uso. Os dados são preocupantes, já 
+                            que a adesão incorreta ao tratamento ajuda o HIV a desenvolver resistência aos medicamentos.  </p>
+                    </div>
+                    <hr class="linha">
+                </div>
+
+                <div>
+                    <div class="capitulos">
+                        <h2>Cap. 4 — Família</h2>
+                        <p><i><b>João</b>  Taurino com ascendente em leão. Seguro de si, só queria uma coisa: que todos entendesse de fato a vida positiva. </i></p>
+                    </div>
+                   
+                    <div class="previa">
+                        <div class="textos">
+                            <h4>Leia uma prévia</h4>
+
+                            <p>Lá fora o sol já apontava com toda a força das 11 horas 
+                            da manhã. As ruas movimentadas. Ir e vir de carros, pessoas e 
+                            sentimentos. A força, que até então João insistia em segurar, se 
+                            desfez no fluxo de suas certezas e inseguranças. A armadura 
+                            que ele mesmo persistiu em vestir, a confiança, firmeza e segurança, não se sustentaram durante muito tempo. Foram poucos 
+                            passos, já a alguns metros da unidade de saúde. No segundo quarteirão, João desabou. Chorou, chorou, chorou. Chorou 
+                            andando na rua. As pessoas que passavam e o viam naquele 
+                            estado deviam não entender, mas ele continuou andando até 
+                            chegar em casa. </p>
+                            <p>Morava com a família. Horário de almoço, estavam seu 
+                            pai, seu irmão e sua cunhada na sala. Já entrou chorando, não 
+                            conseguiu segurar. João, com o papel do exame na mão, desa
+                            bafou. “Esse aqui é um exame de sangue que deu positivo pro 
+                            teste de HIV. Eu sou soropositivo”. Seu irmão já foi ao chão, 
+                            desesperou, começou a chorar e o abraçou. Seu pai, também 
+                            muito mexido com tudo, já o aconchegou em gesto de apoio. 
+                            “Foi o momento de amparo que eu tive. As primeiras pessoas a 
+                            saberem foram eles. Eu precisava compartilhar isso. A família é 
+                            onde eu tenho a recorrer, onde eu sempre tive e onde eu sem
+                            pre vou ter”, relembra.</p>
+                            </div>
+                            <img src="/img/perfis-joao.png" alt>
+
+                    </div>
+
+                    <div class="entenda">
+                            <h4>Entenda</h4>
+                            <p>Com a história particular de João podemos ilustrar a realidade brasileira em geral. Com 14 anos, no início de sua vida sexual, ele se expôs ao vírus, muito associado à falta de hábito do povo brasileiro no uso do preservativo. A mais recente 
+                            Pesquisa de Conhecimentos de Atitudes e Práticas da População Brasileira, realizada pelo Ministério da Saúde em 2013 e 
+                            divulgada em 2016, aponta que apenas 64,2% da população 
+                            sexualmente ativa entre 15 e 24 anos, utilizaram o preservativo na primeira relação sexual. A taxa de uso de preservativo 
+                            cai ainda mais quando consideramos todas as relações sexuais, 
+                            para 23,5% com qualquer parceria.  </p>
+                    </div>
+                </div>
+
+
+            </section>
         </main>
-        <footer></footer>
+
+        <!-- <footer>
+            <p>Todos os direitos reservados.</p>
+            <p>Layout por <a href="https://github.com/ygorodrigs"><b>Ygor
+                        Rodrigues</b></a></p>
+        </footer> -->
 
     </body>
 </html>
