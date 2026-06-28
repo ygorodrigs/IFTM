@@ -661,7 +661,7 @@ footer a {
         display: block;
     }
 
-    header .header-mobile {
+    .header-mobile {
         display: none;
     }
 
