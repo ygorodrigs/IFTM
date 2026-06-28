@@ -56,11 +56,11 @@ html, body {
     margin-right: 15px; 
 }
 
-header .menu-checkbox {
+.menu-checkbox {
     display: none;
 }
 
-header .menu-toggle {
+.menu-toggle {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -70,14 +70,14 @@ header .menu-toggle {
     cursor: pointer;
 }
 
-header .menu-toggle .risco-menu {
+.menu-toggle .risco-menu {
     width: 100%;
     height: 3px;
     background-color: #fff;
     transition: 0.3s;
 }
 
-header .nav-menu {
+.nav-menu {
     position: fixed;
     top: 0;
     left: 5%; 
@@ -136,7 +136,7 @@ header .nav-menu {
     transform: translateY(0);
 }
 
-header .close-menu {
+.close-menu {
     position: absolute;
     top: 15px;
     right: 15px; 
@@ -275,7 +275,8 @@ section:nth-of-type(even) {
 }
 
 .section-abertura h1, 
-.section-inicio h2 {
+.section-inicio h2,
+.section-servicos h1 {
     text-align: center;
 }
 
@@ -360,14 +361,19 @@ section:nth-of-type(even) {
     border: none;
 }
 
-.section-leia button a {
-    text-decoration: none;
-    color: rgb(165, 40, 43);
-    font-weight: bold;
-}
+ .section-leia a {
+        background-color: white;
+        border-radius: 0px;
+        /* width: 10px; */
+        padding: 2px;
+        text-align: center;
+        margin: auto;
+        border: none;
+        color: rgb(165, 40, 43);
+    }
 
 .section-leia {
-    padding-bottom: 100px;
+    padding-bottom: 30px;
 }
 
 .container-perfis p,
@@ -375,6 +381,14 @@ section:nth-of-type(even) {
 .container-perfis h2,
 .container-perfis h4,
 .container-perfis img {
+    /* border: 2px solid yellow; */
+    padding: 10px 0px; 
+}
+
+.container-extra p,
+.container-extra h2,
+.container-extra h4,
+.container-extra img {
     /* border: 2px solid yellow; */
     padding: 10px 0px; 
 }
@@ -387,7 +401,12 @@ section:nth-of-type(even) {
     gap: 10px;
 }
 
-.container-perfis h1 {
+.container-extra img {
+    width: 70%;
+}
+
+.container-perfis h1,
+.container-extra h1 {
     text-align: center;
     width: 80%;
     margin: auto;
@@ -433,10 +452,16 @@ section:nth-of-type(even) {
 }
 
 .container-perfis .capitulos > p {
-    width: 80%;
+    width: 90%;
     text-align: center;
     margin: auto;
 }
+
+/* .container-extra p {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+} */
 
 .container-perfis .capitulos h2 {
     text-align: center;
@@ -473,7 +498,9 @@ section:nth-of-type(even) {
     width: 100% !important;
 }
 
-.container-perfis p {
+.container-perfis p,
+.container-extra p,
+.container-servicos p {
     line-height: 24px;
     font-size: 15px;
     text-align: justify;
@@ -488,21 +515,125 @@ section:nth-of-type(even) {
     box-sizing: border-box;
 }
 
+.container-extra p,
+.container-servicos p {
+    width: 90%;
+    margin: auto;
+}
 
+.container-extra h3,
+.container-servicos h3 {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+    .container-roteiro > div button {
+        background-color: rgb(165, 40, 43) !important;
+        color: white !important;
+        border: none !important;
+        padding: 10px 20px !important;
+        font-size: 13px !important;
+        font-weight: bold !important;
+        border-radius: 4px !important;
+        cursor: pointer !important;
+        width: 100% !important; /* Botão ocupa toda a largura do quadrado */
+        max-width: 150px !important;
+        transition: background-color 0.2s ease !important;
+    }
+
+    .container-roteiro a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .container-extra {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .container-extra iframe {
+        width: 80%;
+    }
+
+    .container-extra > div {
+        display: flex;
+        flex-direction: column;
+        gap: 15px
+    }
+
+    /* .container-extra div {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+       justify-content: center;
+    }  */
+
+    .container-spotify {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center !important;
+        text-align: center !important;
+        align-items: center !important;
+    }
+
+    .container-contrapartida div {
+        display: flex;
+        /* border: 2px solid red; */
+        flex-direction: column;
+        gap: 15px;
+        /* text-align: center; */
+        /* justify-content: center; */
+        /* text-align: center; */
+    }
+
+    .container-spotify > div > div {
+        align-items: center;
+    }
+
+    .container-roteiro > div > div {
+        align-items: center;
+    }
+
+    .container-extra h1,
+    .container-servicos h1 {
+        margin-top: 10px;
+    }
+
+    /* .container-extra > iframe {
+        text-align: center;
+        border: 2px solid red;
+        justify-content: center;
+        justify-content: center;
+    } */
 
 footer {
-    background-image: url('../img/footer-img.png');
-    width: 100%;  
-    margin-top: -30px;
-    margin-bottom: 25px;
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: 100% auto; 
-    padding-top: 50px;
+    /* background-image: url('../img/footer-img.png'); */
+    /* width: 100%;   */
+    /* margin-top: -30px; */
+    /* margin-bottom: 25px; */
+    /* background-repeat: no-repeat; */
+    /* background-position: top center;
+    background-size: 100% auto;  */
+    /* padding-top: 50px; */
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 30px 0px;
 }
+
+.container-servicos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    text-align: center;
+}
+
 
 
 footer a {
@@ -936,9 +1067,9 @@ footer a {
         padding-left: 20px; 
     }
     
-    .section-leia {
-        padding-bottom: 180px;
-    }
+    /* .section-leia {
+        padding-bottom: 30px !important;
+    } */
 
     .container-digital,
     .container-biblioteca {
@@ -954,17 +1085,10 @@ footer a {
         height: auto;
     }
 
-   .section-leia button:hover {
-        background-color: white;
-        border-radius: 999px;
-        width: 150px;
-        padding: 15px;
-        text-align: center;
-        margin: auto;
-        border: none;
-    }
 
-    .container-perfis {
+    .container-perfis,
+    .container-extra,
+    .container-servicos {
         max-width: 1200px;
         margin: 0 auto;
         width: 100%;
@@ -1001,9 +1125,11 @@ footer a {
         width: 100% !important;
     }
 
-    .container-perfis h1 {
+    .container-perfis h1,
+    .container-extra h1 {
         padding: none;
 
+    }
 
     /* Isso diz ao navegador: aplique apenas nas imagens que estão dentro do bloco de prévia */
     .previa img {
@@ -1024,7 +1150,7 @@ footer a {
         /* gap: 10px !important; */
         background-color: rgb(165, 40, 43);
         color: white;
-        padding: 20px !important;
+        /* padding: 20px !important; */
     }
 
     .linha {
@@ -1037,10 +1163,121 @@ footer a {
         width: 50%;
     }
 
-    .container-perfis p {
+    .container-perfis p,
+    .container-extra p {
         line-height: 25px;
     }
 
+    /* .container-extra  {
+        display: flex;
+        flex-direction: column;
+        gap: 40px !important;
+        /* border: 3px solid yellow; */
+
+    .container-extra > div {
+        /* border: 2px solid yellow; */
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .container-roteiro {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        text-align: center;
+        justify-content: center;
+        /* align-items: center; */
+        border: 0.5px solid rgb(165, 40, 43);
+        border-radius: 10px;
+        gap: 24px;
+        box-sizing: border-box;
+    }
+
+        /* Container principal do Grid */
+    .container-roteiro {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* Cria as 2 colunas */
+        gap: 24px !important; /* Dá um espaço bem definido entre os quadrados */
+        width: 100% !important;
+        padding: 20px !important;
+        box-sizing: border-box !important;
+    }
+
+
+    .container-roteiro > div h3 {
+        color: rgb(165, 40, 43) !important; /* Deixa o tema principal em destaque */
+        font-size: 14px !important;
+        text-transform: uppercase !important;
+        margin-bottom: 8px !important;
+        letter-spacing: 0.5px !important;
+    }
+
+    .container-roteiro > div h4 {
+        color: #333333 !important;
+        font-size: 16px !important;
+        font-weight: 600 !important;
+        margin-bottom: 16px !important;
+        line-height: 1.4 !important;
+    }
+
+    .container-roteiro > div button {
+        background-color: rgb(165, 40, 43) !important;
+        color: white !important;
+        border: none !important;
+        padding: 10px 20px !important;
+        font-size: 13px !important;
+        font-weight: bold !important;
+        border-radius: 4px !important;
+        cursor: pointer !important;
+        width: 100% !important; /* Botão ocupa toda a largura do quadrado */
+        max-width: 150px !important;
+        transition: background-color 0.2s ease !important;
+    }
+
+    .container-roteiro a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .container-spotify {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 25px !important;
+        align-items: center;
+    }
+
+    .container-spotify img {
+        width: 30%;
+    }
+
+    .container-extra p,
+    .container-servico p {
+        width: 100%;
+        margin: auto;
+    }
+
+    .container-extra h3,
+    .container-servicos h3 {
+        width: 100%;
+        margin: auto;
+        text-align: justify;
+    }
+
+    .container-servicos {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .container-servicos p {
+        width: 100%;
+    }
+
+    /* .footer-vermelho {
+        color: white;
+        background-color: rgb(165, 40, 43);
+        
+    } */
     
     footer {
         background-image: url('../img/footer-img.png');
