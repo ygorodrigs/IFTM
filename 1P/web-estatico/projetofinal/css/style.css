@@ -179,11 +179,11 @@ html, body {
     transition: all 0.2s ease;
 }
 
-.nav-menu ul li a:hover {
+/* .nav-menu ul li a:hover {
     background-color: rgb(165, 40, 43);
     color: #ffffff;
     padding-left: 10px; 
-}
+} */
 
 .submenu-mobile {
     padding: 10px 5px;
@@ -218,9 +218,9 @@ html, body {
     padding: 4px 0;
 }
 
-.perfil-card-mobile:hover .perfil-nome-mobile {
+/* .perfil-card-mobile:hover .perfil-nome-mobile {
     color: rgb(165, 40, 43); 
-}
+} */
 
 .perfil-foto-mobile {
     width: 38px; 
@@ -425,19 +425,6 @@ section:nth-of-type(even) {
     display: none;
 }
 
-.container-perfis span {
-    /* margin: 30px; */
-}
-
-/* hr {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    /* border: 2px solid red; 
-    width: 90%;
-    margin: auto;
-} 
-*/
-
 .container-perfis > div > p {
     width: 90%;
     margin: auto;
@@ -445,11 +432,9 @@ section:nth-of-type(even) {
 }
 
 .container-perfis {
-    /* border: 3px solid yellow !important; */
     margin-bottom: 0px !important;
 }
 
-/* Aplicamos o recuo de 20px APENAS nos textos e títulos do perfil */
 .container-perfis h2,
 .container-perfis .previa {
     padding: 0 20px;
@@ -521,7 +506,7 @@ section:nth-of-type(even) {
 /* O bloco vermelho agora ocupa 100% da largura, igualzinho ao do index */
 .container-perfis .entenda {
     width: 100%;
-    padding: 20px !important; O espaço fica do lado de dentro
+    padding: 20px !important; 
     background-color: rgb(165, 40, 43);
     color: white;
     box-sizing: border-box;
@@ -655,9 +640,6 @@ footer {
     text-decoration: none;
 }
 
-.footer-branco {
-    /* border: 2px solid yellow; */
-}
 
 .container-servicos {
     display: flex;
@@ -824,9 +806,9 @@ footer {
         margin-bottom: 3px; 
     }
 
-    .item-retratil:hover .menu-gatilho {
+    /* .item-retratil:hover .menu-gatilho {
         color: rgb(165, 40, 43);   
-    }
+    } */
 
     .item-retratil:hover .menu-gatilho::after {
         border-color: rgb(165, 40, 43);
