@@ -268,15 +268,22 @@ section:nth-of-type(even) {
 }
 
 .section-abertura img {
+    display: flex;
     order: 1;
     width: 90%;
     margin: 20px 0;
     filter: drop-shadow(5px 10px 8px rgba(0, 0, 0, 0.3));
+    text-align: center;
+    /* border: 2px solid red; */
+    justify-content: center;
+    /* align-items: center; */
+    padding-bottom: 20px;
+    margin: auto;
 }
 
 .section-abertura h1, 
 .section-inicio h2,
-.section-servicos h1 {
+.container-servicos h1 {
     text-align: center;
 }
 
@@ -419,7 +426,7 @@ section:nth-of-type(even) {
 }
 
 .container-perfis span {
-    margin: 30px;
+    /* margin: 30px; */
 }
 
 /* hr {
@@ -435,6 +442,11 @@ section:nth-of-type(even) {
     width: 90%;
     margin: auto;
     line-height: 23px !important;
+}
+
+.container-perfis {
+    /* border: 3px solid yellow !important; */
+    margin-bottom: 0px !important;
 }
 
 /* Aplicamos o recuo de 20px APENAS nos textos e títulos do perfil */
@@ -509,7 +521,7 @@ section:nth-of-type(even) {
 /* O bloco vermelho agora ocupa 100% da largura, igualzinho ao do index */
 .container-perfis .entenda {
     width: 100%;
-    padding: 20px !important; /* O espaço fica do lado de dentro */
+    padding: 20px !important; O espaço fica do lado de dentro
     background-color: rgb(165, 40, 43);
     color: white;
     box-sizing: border-box;
@@ -626,20 +638,42 @@ footer {
     padding: 30px 0px;
 }
 
+.footer-vermelho {
+    display: flex;
+    /* border: 2px solid yellow; */
+    background-color: rgb(165, 40, 43);
+    color: white !important;
+}
+
+.footer-vermelho a {
+    color: white !important;
+    text-decoration: none;
+}
+
+.footer-branco a {
+    color: #333;
+    text-decoration: none;
+}
+
+.footer-branco {
+    /* border: 2px solid yellow; */
+}
+
 .container-servicos {
     display: flex;
     flex-direction: column;
     gap: 15px;
     justify-content: center;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 
 
-footer a {
+/* footer a {
     text-decoration: none;
     color: #333;
-}
+} */
 
 /* ==========================================================
    CONFIGURAÇÕES PARA TELAS MAIORES (TABLETS E COMPUTADORES)
@@ -1094,14 +1128,22 @@ footer a {
         width: 100%;
         display: flex;
         flex-direction: column;
-        padding: 50px 0px !important;
+        padding-top: 50px !important;
         text-align: justify;
+    }
+
+    .container-servicos {
+        margin-bottom: 20px;
+
     }
 
     .container-perfis > div {
         display: flex;
         flex-direction: column;
         gap: 10px !important;
+        margin-bottom: 0px;
+        padding: 0px;
+        margin-bottom: 0px;
     }
 
     .container-perfis > div > p {
@@ -1250,6 +1292,16 @@ footer a {
         width: 30%;
     }
 
+    .section-leia {
+        margin-bottom: 0px !important;
+        padding-bottom: 0px !important;
+        border: 2px solid brown;
+    }
+
+    .entenda {
+        border: 2px solid brown;
+    }
+
     .container-extra p,
     .container-servico p {
         width: 100%;
@@ -1279,7 +1331,7 @@ footer a {
         
     } */
     
-    footer {
+    /* footer {
         background-image: url('../img/footer-img.png');
         width: 100%;  
         margin-top: -6vw; 
@@ -1293,5 +1345,5 @@ footer a {
         align-items: center;
         position: relative;
         z-index: 10; 
-    }
+    } */
 }

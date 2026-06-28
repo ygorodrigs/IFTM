@@ -1,208 +1,323 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O Laço que Abraça</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Plus+Jakarta+Sans:wght@200..800&family=Work+Sans:wght@100..900&display=swap" rel="stylesheet">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>O Laço que Abraça</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Plus+Jakarta+Sans:wght@200..800&family=Work+Sans:wght@100..900&display=swap"
+            rel="stylesheet">
+    </head>
+    <body>
 
-    <header>
-        <div class="header-mobile">
-            <a href="https://www.amazon.com.br/La%C3%A7o-que-Abra%C3%A7a-Relatos-Soropositivos-ebook/dp/B084TSL9RT" class="adquira-livro-mobile">
-                <img src="img/carrinho.png" alt="Carrinho" class="carrinho-mobile-icone">
-                <span>ADQUIRA O LIVRO</span>
-            </a>
+        <header>
+            <div class="header-mobile">
+                <a
+                    href="https://www.amazon.com.br/La%C3%A7o-que-Abra%C3%A7a-Relatos-Soropositivos-ebook/dp/B084TSL9RT"
+                    class="adquira-livro-mobile">
+                    <img src="img/carrinho.png" alt="Carrinho"
+                        class="carrinho-mobile-icone">
+                    <span>ADQUIRA O LIVRO</span>
+                </a>
 
-            <div class="menu-topo-mobile">Menu</div>
-            <input type="checkbox" id="menu-controle" class="menu-checkbox">
+                <div class="menu-topo-mobile">Menu</div>
+                <input type="checkbox" id="menu-controle" class="menu-checkbox">
 
-            <label for="menu-controle" class="menu-toggle" aria-label="Abrir menu">
-                <span class="risco-menu"></span>
-                <span class="risco-menu"></span>
-                <span class="risco-menu"></span>
-            </label>
+                <label for="menu-controle" class="menu-toggle"
+                    aria-label="Abrir menu">
+                    <span class="risco-menu"></span>
+                    <span class="risco-menu"></span>
+                    <span class="risco-menu"></span>
+                </label>
 
-            <nav class="nav-menu">
-                <label for="menu-controle" class="close-menu">×</label>
-                <div class="menu-mobile">
-                    <div>
-                        <img src="img/logo-menu-preto.png" alt="Logo do site" class="logo-menu">
-                    </div>
-                    <div>
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li class="item-retratil-mobile">
-                                <details>
-                                    <summary>Perfis <span class="setinha"></span></summary>
-                                    <div class="submenu-mobile">
-                                        <p class="submenu-titulo">Explore as trajetórias abaixo.</p>
-                                        <p class="submenu-desc-mobile"></p>
-                                        <div class="perfis-grid-mobile">
-                                            <a href="#" class="perfil-card-mobile">
-                                                <img src="img/menu-morgana.png" alt="Morgana" class="perfil-foto-mobile">
-                                                <span class="perfil-nome-mobile">Morgana</span>
-                                            </a>
-                                            <a href="#" class="perfil-card-mobile">
-                                                <img src="img/menu-jota.png" alt="Jota" class="perfil-foto-mobile">
-                                                <span class="perfil-nome-mobile">Jota</span>
-                                            </a>
-                                            <a href="#" class="perfil-card-mobile">
-                                                <img src="img/menu-gloria.png" alt="Glória" class="perfil-foto-mobile">
-                                                <span class="perfil-nome-mobile">Glória</span>
-                                            </a>
-                                            <a href="#" class="perfil-card-mobile">
-                                                <img src="img/menu-joao.png" alt="João" class="perfil-foto-mobile">
-                                                <span class="perfil-nome-mobile">João</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </details>
-                            </li>
-                            <li><a href="#">Extra</a></li>
-                            <li><a href="#">Serviços</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
-
-        <div class="header-desktop">
-            <nav class="nav-fixo">
-                <ul>
-                    <li>
-                        <a href="index.html">
-                            <img src="img/inicio.png" alt="Início" class="botao-inicio">
-                            <span>INÍCIO</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.amazon.com.br/La%C3%A7o-que-Abra%C3%A7a-Relatos-Soropositivos-ebook/dp/B084TSL9RT">
-                            <img src="img/carrinho.png" alt="Carrinho" class="botao-inicio">
-                            <span>ADQUIRA O LIVRO</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-
-            <nav class="nav-desktop">
-                <a href="index.html"><img src="img/logo-menu-preto.png" alt="Logo" class="img-menu2"></a>
-                <ul>
-                    <li class="item-retratil-mobile">
-                        <a href="perfis.html" class="menu-gatilho">PERFIS</a>
-                        <div class="submenu">
-                            <p class="submenu-desc">Explore as trajetórias abaixo:</p>
-                            <div class="perfis-grid">
-                                <a href="perfis.html#morgana" class="perfil-card">
-                                    <img src="img/menu-morgana.png" alt="Morgana" class="perfil-foto">
-                                    <span class="perfil-nome">Morgana</span>
-                                </a>
-                                <a href="perfis.html#jota" class="perfil-card">
-                                    <img src="img/menu-jota.png" alt="Jota" class="perfil-foto">
-                                    <span class="perfil-nome">Jota</span>
-                                </a>
-                                <a href="perfis.html#gloria" class="perfil-card">
-                                    <img src="img/menu-gloria.png" alt="Glória" class="perfil-foto">
-                                    <span class="perfil-nome">Glória</span>
-                                </a>
-                                <a href="perfis.html#joao" class="perfil-card">
-                                    <img src="img/menu-joao.png" alt="João" class="perfil-foto">
-                                    <span class="perfil-nome">João</span>
-                                </a>
-                            </div>
+                <nav class="nav-menu">
+                    <label for="menu-controle" class="close-menu">×</label>
+                    <div class="menu-mobile">
+                        <div>
+                            <img src="img/logo-menu-preto.png"
+                                alt="Logo do site" class="logo-menu">
                         </div>
-                    </li>
-                    <li><a href="extra.html">EXTRA</a></li>
-                    <li><a href="servicos.html">SERVIÇOS</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <section class="section-abertura content-padding">
-            <div class="container-interno">
-                <div class="info-abertura">
-                    <h1><u>Ei, você!</u> Puxa uma cadeira, vamos conversar!</h1>
-                    <p>Quantas pessoas soropositivas você conhece? O que você sabe sobre o HIV? <span>O Laço que abraça é uma conversa sobre acolhimento.</span> O livro acolhe pessoas soropositivas e abre espaço para que elas nos contem suas histórias, suas reações e relações, marcadas pela descoberta de ter o vírus em seus organismos. Ele também acolhe as suas leitoras e leitores para uma conversa franca, mesclando os relatos pessoais de <b>Morgana, Jota, Glória e João a dados científicos</b>, apresentados de forma simples e acessível. A proposta é que o conhecimento produza acolhimento. <i>Você aceita esse convite? Espero que sim!</i></p>
-                </div>
-                <img src="img/fotoAbertura.png" alt="Foto de abertura">
+                        <div>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li class="item-retratil-mobile">
+                                    <details>
+                                        <summary>Perfis <span
+                                                class="setinha"></span></summary>
+                                        <div class="submenu-mobile">
+                                            <p class="submenu-titulo">Explore as
+                                                trajetórias abaixo.</p>
+                                            <p class="submenu-desc-mobile"></p>
+                                            <div class="perfis-grid-mobile">
+                                                <a href="perfis.html#morgana"
+                                                    class="perfil-card-mobile">
+                                                    <img
+                                                        src="img/menu-morgana.png"
+                                                        alt="Morgana"
+                                                        class="perfil-foto-mobile">
+                                                    <span
+                                                        class="perfil-nome-mobile">Morgana</span>
+                                                </a>
+                                                <a href="perfis.html#jota"
+                                                    class="perfil-card-mobile">
+                                                    <img src="img/menu-jota.png"
+                                                        alt="Jota"
+                                                        class="perfil-foto-mobile">
+                                                    <span
+                                                        class="perfil-nome-mobile">Jota</span>
+                                                </a>
+                                                <a href="perfis.html#gloria"
+                                                    class="perfil-card-mobile">
+                                                    <img
+                                                        src="img/menu-gloria.png"
+                                                        alt="Glória"
+                                                        class="perfil-foto-mobile">
+                                                    <span
+                                                        class="perfil-nome-mobile">Glória</span>
+                                                </a>
+                                                <a href="perfis.html#joao"
+                                                    class="perfil-card-mobile">
+                                                    <img src="img/menu-joao.png"
+                                                        alt="João"
+                                                        class="perfil-foto-mobile">
+                                                    <span
+                                                        class="perfil-nome-mobile">João</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </details>
+                                </li>
+                                <li><a href="extra.html">Extra</a></li>
+                                <li><a href="servicos.html">Serviços</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
             </div>
-        </section>
 
-        <section class="section-inicio content-padding">
-            <div class="container-interno col-unico">
-                <h2>Onde começa essa história?</h2>
-                <p><span>O Laço que Abraça</span> é um livro de perfis que surgiu das histórias e nuances de quatros pessoas anônimas, comuns e soropositivas, <b>produzido como projeto experimental do curso de Comunicação Social da Universidade Federal de Uberlândia</b>. Foi publicado em 2019 com <b>apoio do Programa Municipal de Incentivo à Cultura (PMIC) da Prefeitura Municipal de Uberlândia.</b></p>
-                <p>O livro é composto por <a href="perfis.html">quatro perfis anônimos</a> e, ao final de cada um, a seção a Entenda, que se propõe a esclarecer e contextualizar, trazendo dados científicos e pesquisas relacionadas ao capítulo que você acabou de ler. Além disso, há indicações dos <a href="servicos.html">lugares mencionados nas histórias</a>, tais como ambulatórios, ONG, casas de acolhimento, todos em Uberlândia.</p>
+            <div class="header-desktop">
+                <nav class="nav-fixo">
+                    <ul>
+                        <li>
+                            <a href="index.html">
+                                <img src="img/inicio.png" alt="Início"
+                                    class="botao-inicio">
+                                <span>INÍCIO</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="https://www.amazon.com.br/La%C3%A7o-que-Abra%C3%A7a-Relatos-Soropositivos-ebook/dp/B084TSL9RT">
+                                <img src="img/carrinho.png" alt="Carrinho"
+                                    class="botao-inicio">
+                                <span>ADQUIRA O LIVRO</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <nav class="nav-desktop">
+                    <a href="index.html"><img src="img/logo-menu-preto.png"
+                            alt="Logo" class="img-menu2"></a>
+                    <ul>
+                        <li class="item-retratil">
+                            <a href="perfis.html"
+                                class="menu-gatilho">PERFIS</a>
+                            <div class="submenu">
+                                <p class="submenu-desc">Explore as trajetórias
+                                    abaixo:</p>
+                                <div class="perfis-grid">
+                                    <a href="perfis.html#morgana"
+                                        class="perfil-card">
+                                        <img src="img/menu-morgana.png"
+                                            alt="Morgana" class="perfil-foto">
+                                        <span class="perfil-nome">Morgana</span>
+                                    </a>
+                                    <a href="perfis.html#jota"
+                                        class="perfil-card">
+                                        <img src="img/menu-jota.png" alt="Jota"
+                                            class="perfil-foto">
+                                        <span class="perfil-nome">Jota</span>
+                                    </a>
+                                    <a href="perfis.html#gloria"
+                                        class="perfil-card">
+                                        <img src="img/menu-gloria.png"
+                                            alt="Glória" class="perfil-foto">
+                                        <span class="perfil-nome">Glória</span>
+                                    </a>
+                                    <a href="perfis.html#joao"
+                                        class="perfil-card">
+                                        <img src="img/menu-joao.png" alt="João"
+                                            class="perfil-foto">
+                                        <span class="perfil-nome">João</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="extra.html">EXTRA</a></li>
+                        <li><a href="servicos.html">SERVIÇOS</a></li>
+                    </ul>
+                </nav>
             </div>
-        </section>
+        </header>
 
-        <section class="section-evento content-padding">
-            <div class="container-interno">
-                <figure class="foto-evento">
-                    <img class="nota-rodape-img" src="img/foto-evento.png" alt="Imagens do evento de Lançamento">
-                    <figcaption>Em cima, Bianca Guedes e Ygor Rodrigues, dois dos cinco integrantes do projeto. Abaixo, Ana Spanemberg, orientadora e parceira do livro.</figcaption>
-                </figure> 
-
-                <div class="slide-evento">                  
-                    <div class="slide">
-                        <div class="card"><img src="img/foto1.jpg" alt="Foto 1 do evento"></div>
-                        <div class="card"><img src="img/foto2.jpg" alt="Foto 2 do evento"></div>
-                        <div class="card"><img src="img/foto3.jpg" alt="Foto 3 do evento"></div>
-                        <div class="card"><img src="img/foto4.jpg" alt="Foto 4 do evento"></div>
+        <main>
+            <section class="section-abertura content-padding">
+                <div class="container-interno">
+                    <div class="info-abertura">
+                        <h1><u>Ei, você!</u> Puxa uma cadeira, vamos
+                            conversar!</h1>
+                        <p>Quantas pessoas soropositivas você conhece? O que
+                            você sabe sobre o HIV? <span>O Laço que abraça é uma
+                                conversa sobre acolhimento.</span> O livro
+                            acolhe pessoas soropositivas e abre espaço para que
+                            elas nos contem suas histórias, suas reações e
+                            relações, marcadas pela descoberta de ter o vírus em
+                            seus organismos. Ele também acolhe as suas leitoras
+                            e leitores para uma conversa franca, mesclando os
+                            relatos pessoais de <b>Morgana, Jota, Glória e João
+                                a dados científicos</b>, apresentados de forma
+                            simples e acessível. A proposta é que o conhecimento
+                            produza acolhimento. <i>Você aceita esse convite?
+                                Espero que sim!</i></p>
                     </div>
-                    <p class="legenda-img">Sequência de fotos do evento de Lançamento. Na segunda imagem, Bianca Guedes e Ygor Rodrigues, dois dos cinco integrantes do projeto. Na quarta imagem, Ana Spanemberg, orientadora e parceira do livro.</p>
+                    <img src="img/fotoAbertura.png" alt="Foto de abertura">
                 </div>
+            </section>
 
-                <div class="texto-evento">
-                    <p>Graças ao apoio do PMIC, o projeto ganhou novas dimensões. Seu lançamento contou com um momento cultural voltado à prosa e à distribuição gratuita de exemplares. Além disso, com o objetivo de alcançar e conscientizar um público ainda maior por meio de <a href="">contrapartida social</a>, <span><b>O Laço que Abraça</b></span> foi disponibilizado em algumas bibliotecas públicas de Uberlândia.<br><br>Essa expansão também alcançou o ambiente digital, contando com um roteiro de estudos enviado para as redes municipal e estadual de ensino, além de um podcast no Spotify que resume brevemente cada capítulo. Todo esse esforço teve o <b>propósito de expandir e democratizar,</b> o máximo possível, o conteúdo da obra.</p>
+            <section class="section-inicio content-padding">
+                <div class="container-interno col-unico">
+                    <h2>Onde começa essa história?</h2>
+                    <p><span>O Laço que Abraça</span> é um livro de perfis que
+                        surgiu das histórias e nuances de quatros pessoas
+                        anônimas, comuns e soropositivas, <b>produzido como
+                            projeto experimental do curso de Comunicação Social
+                            da Universidade Federal de Uberlândia</b>. Foi
+                        publicado em 2019 com <b>apoio do Programa Municipal de
+                            Incentivo à Cultura (PMIC) da Prefeitura Municipal
+                            de Uberlândia.</b></p>
+                    <p>O livro é composto por <a href="perfis.html">quatro
+                            perfis anônimos</a> e, ao final de cada um, a seção
+                        a Entenda, que se propõe a esclarecer e contextualizar,
+                        trazendo dados científicos e pesquisas relacionadas ao
+                        capítulo que você acabou de ler. Além disso, há
+                        indicações dos <a href="servicos.html">lugares
+                            mencionados nas histórias</a>, tais como
+                        ambulatórios, ONG, casas de acolhimento, todos em
+                        Uberlândia.</p>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="section-leia content-padding">
-            <div class="container-interno col-unico">
-                <h2>Leia o Laço que Abraça</h2>
-                <p>É possível ler os relatos de Morgana, Jota, Glória e João de duas formas: por meio de bibliotecas públicas e digitalmente, através de Ebook adquirido online.</p>
+            <section class="section-evento content-padding">
+                <div class="container-interno">
+                    <figure class="foto-evento">
+                        <img class="nota-rodape-img" src="img/foto-evento.png"
+                            alt="Imagens do evento de Lançamento">
+                        <figcaption>Em cima, Bianca Guedes e Ygor Rodrigues,
+                            dois dos cinco integrantes do projeto. Abaixo, Ana
+                            Spanemberg, orientadora e parceira do
+                            livro.</figcaption>
+                    </figure>
 
-                <div class="container-biblioteca">
-                    <div class="col-img">
-                        <img src="img/biblioteca.png" alt="Biblioteca" class="biblioteca">
+                    <div class="slide-evento">
+                        <div class="slide">
+                            <div class="card"><img src="img/foto1.jpg"
+                                    alt="Foto 1 do evento"></div>
+                            <div class="card"><img src="img/foto2.jpg"
+                                    alt="Foto 2 do evento"></div>
+                            <div class="card"><img src="img/foto3.jpg"
+                                    alt="Foto 3 do evento"></div>
+                            <div class="card"><img src="img/foto4.jpg"
+                                    alt="Foto 4 do evento"></div>
+                        </div>
+                        <p class="legenda-img">Sequência de fotos do evento de
+                            Lançamento. Na segunda imagem, Bianca Guedes e Ygor
+                            Rodrigues, dois dos cinco integrantes do projeto. Na
+                            quarta imagem, Ana Spanemberg, orientadora e
+                            parceira do livro.</p>
                     </div>
-                    <div class="col-bib">
-                        <h4>● Biblioteca UFU Umuarama</h4>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3775.0707035230967!2d-48.2613079246932!3d-18.883944306589513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94a445e79d3f0b2f%3A0x65552976987edba3!2sBiblioteca%20Setorial%20Umuarama%20-%20UFU!5e0!3m2!1spt-BR!2sbr!4v1782135085949!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        <p>Para empréstimo domiciliar é necessário é obrigatório ter vínculo active com a instituição.</p>
-                    </div>
-                    <div class="col-bib">
-                        <h4>● Biblioteca Municipal de Uberlândia</h4>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15097.393650390624!2d-48.294326312841804!3d-18.915966299999976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94a444fed38ed65f%3A0xbe579de972cd4bf1!2sBiblioteca%20P%C3%BAblica%20Municipal%20Juscelino%20Kubitschek%20de%20Oliveira!5e0!3m2!1spt-BR!2sbr!4v1782135420593!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        <p>Para empréstimo domiciliar basta realizar o cadastro presencial.</p>
-                    </div>
-                </div>                
-                <div class="container-digital">
-                    <div class="col-img">
-                        <img src="img/digital.png" alt="Digital" class="digital">
-                    </div>
-                    <div class="col-amazon">
-                        <h4>● Amazon</h4>
-                        <p>Você pode ler O Laço que Abraça direto pelo seu Kindle ou aplicativo de leitura! <a href="https://www.amazon.com.br/La%C3%A7o-que-Abra%C3%A7a-Relatos-Soropositivos-ebook/dp/B084TSL9RT">O e-book está disponível na Amazon por <strong>R$ 5,99</strong></a> e, se você assina o <i>Kindle Unlimited</i>, a leitura é gratuita.</p>
-                       
+
+                    <div class="texto-evento">
+                        <p>Graças ao apoio do PMIC, o projeto ganhou novas
+                            dimensões. Seu lançamento contou com um momento
+                            cultural voltado à prosa e à distribuição gratuita
+                            de exemplares. Além disso, com o objetivo de
+                            alcançar e conscientizar um público ainda maior por
+                            meio de <a href>contrapartida social</a>, <span><b>O
+                                    Laço que Abraça</b></span> foi
+                            disponibilizado em algumas bibliotecas públicas de
+                            Uberlândia.<br><br>Essa expansão também alcançou o
+                            ambiente digital, contando com um roteiro de estudos
+                            enviado para as redes municipal e estadual de
+                            ensino, além de um podcast no Spotify que resume
+                            brevemente cada capítulo. Todo esse esforço teve o
+                            <b>propósito de expandir e democratizar,</b> o
+                            máximo possível, o conteúdo da obra.</p>
                     </div>
                 </div>
-            </div>
-        </section>
-    </main>
+            </section>
 
-    <footer>
-        <p>Todos os direitos reservados.</p>
-        <p>Layout por <a href="https://github.com/ygorodrigs"><b>Ygor Rodrigues</b></a></p>
-    </footer>
+            <section class="section-leia content-padding">
+                <div class="container-interno col-unico">
+                    <h2>Leia o Laço que Abraça</h2>
+                    <p>É possível ler os relatos de Morgana, Jota, Glória e João
+                        de duas formas: por meio de bibliotecas públicas e
+                        digitalmente, através de Ebook adquirido online.</p>
 
-</body>
+                    <div class="container-biblioteca">
+                        <div class="col-img">
+                            <img src="img/biblioteca.png" alt="Biblioteca"
+                                class="biblioteca">
+                        </div>
+                        <div class="col-bib">
+                            <h4>● Biblioteca UFU Umuarama</h4>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3775.0707035230967!2d-48.2613079246932!3d-18.883944306589513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94a445e79d3f0b2f%3A0x65552976987edba3!2sBiblioteca%20Setorial%20Umuarama%20-%20UFU!5e0!3m2!1spt-BR!2sbr!4v1782135085949!5m2!1spt-BR!2sbr"
+                                style="border:0;" allowfullscreen loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <p>Para empréstimo domiciliar é necessário é
+                                obrigatório ter vínculo active com a
+                                instituição.</p>
+                        </div>
+                        <div class="col-bib">
+                            <h4>● Biblioteca Municipal de Uberlândia</h4>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15097.393650390624!2d-48.294326312841804!3d-18.915966299999976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94a444fed38ed65f%3A0xbe579de972cd4bf1!2sBiblioteca%20P%C3%BAblica%20Municipal%20Juscelino%20Kubitschek%20de%20Oliveira!5e0!3m2!1spt-BR!2sbr!4v1782135420593!5m2!1spt-BR!2sbr"
+                                style="border:0;" allowfullscreen loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <p>Para empréstimo domiciliar basta realizar o
+                                cadastro presencial.</p>
+                        </div>
+                    </div>
+                    <div class="container-digital">
+                        <div class="col-img">
+                            <img src="img/digital.png" alt="Digital"
+                                class="digital">
+                        </div>
+                        <div class="col-amazon">
+                            <h4>● Amazon</h4>
+                            <p>Você pode ler O Laço que Abraça direto pelo seu
+                                Kindle ou aplicativo de leitura! <a
+                                    href="https://www.amazon.com.br/La%C3%A7o-que-Abra%C3%A7a-Relatos-Soropositivos-ebook/dp/B084TSL9RT">O
+                                    e-book está disponível na Amazon por
+                                    <strong>R$ 5,99</strong></a> e, se você
+                                assina o <i>Kindle Unlimited</i>, a leitura é
+                                gratuita.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer-branco">
+            <p>Todos os direitos reservados.</p>
+            <p>Layout por <a href="https://github.com/ygorodrigs"><b>Ygor
+                        Rodrigues</b></a></p>
+        </footer>
+
+    </body>
 </html>
