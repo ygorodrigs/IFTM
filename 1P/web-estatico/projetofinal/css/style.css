@@ -222,12 +222,12 @@ html, body {
     color: #333333;
 }
 
-section:nth-of-type(odd) {
+.content-padding:nth-of-type(odd) {
     background-color: white;
     color:#333333;
 }
 
-section:nth-of-type(even) {
+.content-padding:nth-of-type(even) {
     background-color: rgb(165, 40, 43);
     color: white;
 } 
@@ -591,6 +591,11 @@ footer {
     justify-content: center;
     text-align: center;
     margin-bottom: 20px;
+}
+
+.servico-contato {
+    display: flex;
+    flex-direction: column;
 }
 
 @media (min-width: 768px) {
@@ -1210,5 +1215,10 @@ footer {
 
     .container-servicos p {
         width: 100%;
+    }
+
+    .servico-contato {
+        display: flex;
+        flex-direction: row;
     }
 }
