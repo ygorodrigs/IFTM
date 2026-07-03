@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERS - Diagra+ | DEVSquad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* 1. CONFIGURAÇÃO BASE - Estilo Moderno de Consultoria Tech */
+        * { box-sizing: border-box; }
+        body {
+            background-color: #0f172a;
+            display: grid;
+            gap: 25px;
+            grid-template-columns: 1fr;
+            margin: 0;
+            min-height: 100vh;
+            padding: 20px 0;
+            place-items: center;
+        }
+
+        .slide-container {
+            align-items: center;
+            background-color: #020617;
+            border-radius: 12px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            font-family: 'Urbanist', sans-serif;
+            height: 720px;
+            justify-content: center;
+            overflow: hidden;
+            padding: 60px;
+            position: relative;
+            width: 1280px;
+            color: #f8fafc;
+        }
+
+        /* Elementos Decorativos de Fundo */
+        .slide-container::before {
+            content: '';
+            position: absolute;
+            top: -10%;
+            right: -5%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(94, 234, 212, 0.08) 0%, transparent 70%);
+            z-index: 0;
+        }
+
+        .slide-container::after {
+            content: '';
+            position: absolute;
+            bottom: 30px;
+            left: 60px;
+            right: 60px;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: 0;
+        }
+
+        .slide-container > * { position: relative; z-index: 1; }
+
+        /* 2. TIPOGRAFIA CONSISTENTE */
+        h1 { font-size: 85px; font-weight: 700; color: #5eead4; margin: 0; line-height: 1.1; letter-spacing: -2px; }
+        .slide-title { font-size: 45px; font-weight: 600; color: #5eead4; margin-bottom: 40px; text-align: left; width: 100%; border-left: 6px solid #5eead4; padding-left: 20px; text-transform: uppercase; letter-spacing: 2px; }
+        h3 { font-size: 30px; color: #f1f5f9; margin-bottom: 12px; font-weight: 600; }
+        p, li, td, th { font-size: 20px; line-height: 1.5; color: #cbd5e1; }
+        .subtitle { font-size: 24px; color: #94a3b8; margin-top: 20px; }
+
+        .content-area { flex-grow: 1; width: 100%; display: flex; flex-direction: column; justify-content: center; }
+
+        /* 3. LAYOUTS REUTILIZÁVEIS */
+        .title-layout { text-align: center; }
+        .team-box { margin-top: 40px; padding: 25px; border: 1px solid rgba(94, 234, 212, 0.2); border-radius: 12px; background: rgba(94, 234, 212, 0.03); }
+
+        .two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; width: 100%; }
+        .two-column.tiled > div { background: rgba(30, 41, 59, 0.4); border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.08); padding: 35px; }
+
+        .tiled-content { display: flex; gap: 25px; width: 100%; }
+        .tile { flex: 1; background: #1e293b; border-radius: 16px; padding: 25px; border-bottom: 4px solid #5eead4; text-align: center; }
+        .tile .icon { font-size: 45px; color: #5eead4; margin-bottom: 15px; }
+
+        .image-wrapper { border-radius: 16px; overflow: hidden; height: 420px; border: 1px solid rgba(255, 255, 255, 0.1); background: #fff; }
+        .image-wrapper img { width: 100%; height: 100%; object-fit: contain; padding: 10px; }
+
+        .bullet-list { list-style: none; padding: 0; }
+        .bullet-list li { position: relative; padding-left: 40px; margin-bottom: 15px; }
+        .bullet-list li i { position: absolute; left: 0; top: 4px; color: #5eead4; font-size: 22px; }
+
+        .table-layout table { width: 100%; border-collapse: collapse; }
+        .table-layout th { background: #1e293b; color: #5eead4; text-align: left; padding: 15px; text-transform: uppercase; font-size: 16px; }
+        .table-layout td { padding: 15px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+
+        /* Estilo Bleed Image */
+        .slide-container.bleed-image-layout { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 0; align-items: start; }
+        .bleed-image-layout .content-container { padding: 80px 60px; }
+        .bleed-image-layout img.bleed-image-side { width: 100%; height: 720px; object-fit: cover; }
+    </style>
+</head>
+<body>
+
+    <div class="slide-container" id="slide1">
+        <div class="title-layout">
+            <h1>Diagra<span>+</span></h1>
+            <p class="subtitle">Especificação de Requisitos de Software (ERS)</p>
+            <div class="team-box">
+                <p><strong>Equipe DEVSquad:</strong> Christhian Kayk, Felipe Alcântara, Luanny Victória, Luiz Felipe e Ygor Rodrigues</p>
+                <p>IFTM - Campus Uberlândia Centro | Prof. Edson Angoti Junior</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 2 ATUALIZADO -->
+    <div class="slide-container" id="slide2">
+        <h2 class="slide-title">Visão do Produto e Público</h2>
+        <div class="content-area">
+            <div class="tiled-content">
+                <div class="tile">
+                    <div class="icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                    <h3>O Problema</h3>
+                    <p style="font-size: 18px;">Centralização de demandas. Hoje o Colégio Nacional sofre com pedidos perdidos em WhatsApp/E-mail e retrabalho de diagramadores que começam arquivos do zero.</p>
+                </div>
+                <div class="tile">
+                    <div class="icon"><i class="fa-solid fa-rocket"></i></div>
+                    <h3>A Solução</h3>
+                    <p style="font-size: 18px;">Uma plataforma web que padroniza o pedido e oferece um "Acervo Inteligente" para reutilizar materiais de anos anteriores.</p>
+                </div>
+                <div class="tile">
+                    <div class="icon"><i class="fa-solid fa-bullseye"></i></div>
+                    <h3>Público-Alvo</h3>
+                    <p style="font-size: 18px;">Setor de Editoração/Diagramação do Colégio Nacional.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-container" id="slide3">
+        <h2 class="slide-title">Stakeholders e Limites</h2>
+        <div class="content-area">
+            <div class="tiled-content">
+                <div class="tile">
+                    <div class="icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+                    <h3>Professores</h3>
+                    <p>Solicitantes do material didático bruto.</p>
+                </div>
+                <div class="tile">
+                    <div class="icon"><i class="fa-solid fa-users-gear"></i></div>
+                    <h3>Coordenadores</h3>
+                    <p>Validadores e gestores de prioridades.</p>
+                </div>
+                <div class="tile">
+                    <div class="icon"><i class="fa-solid fa-pen-nib"></i></div>
+                    <h3>Diagramadores</h3>
+                    <p>Responsáveis pela finalização técnica dos arquivos.</p>
+                </div>
+            </div>
+            <p style="margin-top: 30px; text-align: center; color: #94a3b8;"><strong>Fora de Escopo:</strong> Criação de conteúdo educativo, logística de impressão e chat em tempo real.</p>
+        </div>
+    </div>
+
+    <div class="slide-container" id="slide4">
+        <h2 class="slide-title">Diagrama de Caso de Uso</h2>
+        <div class="content-area">
+                            <img src="diagrama.png" alt="" width="80%">
+
+            <div class="two-column tiled">
+                <!-- <div>
+                    <h3><i class="fa-solid fa-scale-balanced"></i> RN01 - Prazos</h3>
+                    <p>O sistema deve calcular o prazo automaticamente (ex: Prova = 5 dias), permitindo ajuste manual apenas pela Coordenação.</p>
+                </div>
+                <div>
+                    <h3><i class="fa-solid fa-download"></i> RN02 - Downloads</h3>
+                    <p>Professores só podem realizar o download do arquivo finalizado quando o status da demanda constar como "Concluído".</p>
+                </div>
+                <div>
+                    <h3><i class="fa-solid fa-clock-rotate-left"></i> RN03 - Histórico</h3>
+                    <p>Materiais antigos salvos no Acervo Inteligente não podem ser deletados, sendo permitida apenas a consulta e download.</p>
+                </div> -->
+              
+
+                <!-- <div>
+                    <h3><i class="fa-solid fa-bell"></i> Demostrativo</h3>
+
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-container" id="slide5">
+        <h2 class="slide-title">Detalhamento: UC-03 Cadastro</h2>
+        <div class="content-area">
+            <div class="two-column tiled">
+                <div>
+                    <h3>Fluxo Principal</h3>
+                    <p>1. Usuário acessa "Nova Demanda".<br>2. Sistema solicita tipo, disciplina e segmento.<br>3. Usuário realiza o upload do bruto.<br>4. Sistema gera protocolo e status "Aguardando".</p>
+                </div>
+                <div>
+                    <h3>Fluxo de Exceção</h3>
+                    <p>Caso o upload exceda o limite de 50MB ou campos obrigatórios não sejam preenchidos, o sistema exibe alertas em vermelho e impede o registro até a correção.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-container bleed-image-layout" id="slide6">
+        <div class="content-container">
+            <a href="https://www.figma.com/design/7eZVG27cR0q9fGfCN9vc14/Telas-Figma_Diagramais?node-id=1-32&t=2BMRmWTyWkw7RZJ1-1
+"><h2 class="slide-title" style="width: auto; margin-bottom: 20px;">Protótipo Figma</h2></a>
+            <div class="content-area">
+                <p>Navegação fluida cobrindo os principais casos de uso detalhados no ERS.</p>
+                <!-- <ul class="bullet-list">
+                    <li><i class="fa-solid fa-desktop"></i> Dashboard responsivo.</li>
+                    <li><i class="fa-solid fa-magnifying-glass-chart"></i> Busca Inteligente no Acervo.</li>
+                    <li><i class="fa-solid fa-upload"></i> Fluxo de upload simplificado.</li>
+                </ul> -->
+            </div>
+        </div>
+        <!-- <div class="image-container">
+            <img class="bleed-image-side" src="http://googleusercontent.com/image_collection/image_retrieval/7680023925566490228" alt="Interface Dashboard Moderno Diagra+">
+        </div> -->
+    </div>
+
+    <div class="slide-container" id="slide7">
+        <h2 class="slide-title">Destaques do ERS</h2>
+        <div class="content-area">
+            <div class="table-layout">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Identificador</th>
+                            <th>Descrição Resumida</th>
+                            <th>Critério de Aceite</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>RF-02</td>
+                            <td>Consulta ao Acervo Inteligente</td>
+                            <td>Filtros por disciplina e ano (retorno < 4s)</td>
+                        </tr>
+                        <tr>
+                            <td>RF-06</td>
+                            <td>Cálculo Automático de Prazos</td>
+                            <td>Sugestão baseada no tipo de material</td>
+                        </tr>
+                        <tr>
+                            <td>RNF-03</td>
+                            <td>Criptografia de Dados</td>
+                            <td>Uso de protocolo HTTPS / TLS 1.3</td>
+                        </tr>
+                        <tr>
+                            <td>RNF-08</td>
+                            <td>Facilidade de Aprendizado</td>
+                            <td>Cadastro concluído em < 3 min sem treino</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide-container" id="slide8">
+        <div class="title-layout">
+                <p>Equipe DEVSquad | IFTM 2026</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+```
