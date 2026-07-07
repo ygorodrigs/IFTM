@@ -14,6 +14,10 @@ Repositório das disciplinas do curso Tecnólogo em **Sistemas para Internet**, 
 
 &emsp;&emsp;🎨 CSS | <small>Exercícios e projetos em CSS</small>
 
+&emsp;&emsp;&emsp;&emsp;**Exercícios:** | [Lista 13](https://ygorodrigs.github.io/IFTM/1P/web-estatico/lista13/index.html) | [Lista 14](https://ygorodrigs.github.io/IFTM/1P/web-estatico/lista14/index.html) | [Lista 15](https://ygorodrigs.github.io/IFTM/1P/web-estatico/lista15/index.html) 
+
+&emsp;&emsp;&emsp;&emsp;**Simulados:** | [Simulado 01](https://ygorodrigs.github.io/IFTM/1P/web-estatico/simulado01/index.html) | [Simulado 02](https://ygorodrigs.github.io/IFTM/1P/web-estatico/simulado02/index.html) 
+
 &emsp;&emsp;📚 Provas
 
 &emsp;&emsp;🚀 Projeto Final
