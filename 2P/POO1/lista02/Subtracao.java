@@ -7,7 +7,7 @@ public class Subtracao {
         this.b = b;
     }
 
-    public int subtrai() {
+    public int subtrair() {
         return a-b;
     }
 }

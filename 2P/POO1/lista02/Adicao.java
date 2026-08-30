@@ -10,7 +10,7 @@ public class Adicao { // (analogia: substantivo)
 
     }
 
-    public int soma() {
+    public int somar() {
         return a+b;
     }
 
