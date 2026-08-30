@@ -20,30 +20,31 @@ public class Main {
 
             int n1, n2;
 
+            if (op >= 1 && op <= 4) {
+                n1 = leitura("Informe o primeiro número:", s);
+                n2 = leitura("Informe o segundo número:", s);
+            }
+            else {
+                n1 = 0;
+                n2 = 0;
+            }
+
             switch (op) {
                 case 1:
-                    n1 = leitura("Informe o primeiro número:", s);
-                    n2 = leitura("Informe o segundo número:", s);
                     Adicao ad = new Adicao(n1, n2);
                     System.out.println("O resultado da soma é: " + ad.somar());
                     break;
                 case 2:
-                    n1 = leitura("Informe o primeiro número:", s);
-                    n2 = leitura("Informe o segundo número:", s);
                     Subtracao sub = new Subtracao(n1, n2);
                     System.out.println("O resultado da subtração é: " + sub.subtrair());
                     break;
                 case 3:
-                    n1 = leitura("Informe o primeiro número:", s);
-                    n2 = leitura("Informe o segundo número:", s);
                     Multiplicacao mult = new Multiplicacao(n1, n2);
                     System.out.println("O resultado da multiplicação é: " + mult.multiplicar());
                     break;
                 case 4:
-                    n1 = leitura("Informe o primeiro número:", s);
-                    n2 = leitura("Informe o segundo número:", s);
                     Divisao div = new Divisao(n1, n2);
-                    System.out.println("O resultado da divisão é" + div.dividir());
+                    System.out.println("O resultado da divisão é: : " + div.dividir());
                     break;
                 case 5:
                     System.out.println("Programa encerrado.");

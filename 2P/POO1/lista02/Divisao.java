@@ -8,6 +8,10 @@ public class Divisao {
     }
 
     public double dividir() {
-        return a/b;
+        if (b == 0) {
+            System.out.println("Erro: Divisão por zero!");
+            return 0;
+        }
+        return (double) a/b;
     }
 }
