@@ -31,8 +31,8 @@ public class Main {
 
             switch (op) {
                 case 1:
-                    Adicao ad = new Adicao(n1, n2);
-                    System.out.println("O resultado da soma é: " + ad.somar());
+                    Adicao ad = new Adicao(n1, n2); // o new é para gerar conexão com o construtor, ele faz uma reserva o espaço de memória
+                    System.out.println("O resultado da soma é: " + ad.somar()); // atraves do objeto ad, use o somar, aqui que funciona a programação orientada a objetos
                     break;
                 case 2:
                     Subtracao sub = new Subtracao(n1, n2);
