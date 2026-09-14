@@ -11,7 +11,7 @@ public class Adicao { // (analogia: substantivo)
     }
 
     public int somar() {
-        return a+b;
+        return a+b; // variaves da classe, então eu acesso direto
     }
 
 }
