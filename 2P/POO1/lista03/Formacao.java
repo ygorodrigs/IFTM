@@ -1,6 +1,6 @@
 package lista03;
 
-public class Formacao { // Formacao é o objeto
+public class Formacao { // Formacao é uma classe (molde/planta), ele só vira objeto quando há o new
 
     public String nivel; // são os atributos
     public boolean concluido;
