@@ -8,7 +8,7 @@ public class Formacao { // Formacao é uma classe (molde/planta), ele só vira o
     public int ano;
 
     public Formacao(String nivel, boolean concluido, String instituicao, int ano) {
-        this.nivel = nivel;
+        this.nivel = nivel; // this.nivel: refere-se ao atributo que pertence a "este" (this) objeto.
         this.concluido = concluido;
         this.instituicao = instituicao;
         this.ano = ano;
