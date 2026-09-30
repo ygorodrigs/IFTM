@@ -1,0 +1,1 @@
+localStorage.setItem("usuario", "Ygor"); // salva dados. o primeiro é o tipo/chave, o outro é a variavel
