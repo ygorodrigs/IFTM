@@ -59,12 +59,13 @@ img {
 
 .container-felinos {
     display: flex;
-    flex-direction: row; /* Altera a disposição para horizontal */
-    justify-content: center; /* Centraliza as 5 divs na tela */
-    align-items: center;
+    flex-direction: row; 
+    justify-content: center; 
+    align-items: flex-start; /* Alinha todas as divs pelo topo */
     gap: 30px;
     margin-top: 50px;
     text-align: center;
+    /* border: 2px solid red; */
 }
 
 .botao-sorte {
@@ -75,4 +76,13 @@ img {
     border-radius: 10px;
     margin-bottom: 5px;
     cursor: pointer;
+}
+
+.container-felinos > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 250px; /* Trava a altura para os elementos não pularem */
+    width: 200px; /* Mantém uma largura padronizada */
 }
