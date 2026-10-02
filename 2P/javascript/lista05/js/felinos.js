@@ -1,4 +1,5 @@
-nomeCompleto = localStorage.getItem("usuarios");
+nomeCompleto = localStorage.getItem("usuario");
+partes = nomeCompleto.split(" ");
 
 gato01 = document.getElementById("gato01");
 gato01.addEventListener("click", function () {
@@ -13,7 +14,6 @@ gato02.addEventListener("click", function() {
     contadorCarinhos++;
     carinhos.innerHTML = `Carinhos: ${contadorCarinhos}`;
 });
-
 
 gato03 = document.getElementById("gato03");
 gato03.addEventListener("mouseenter", function() {
