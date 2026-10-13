@@ -1,0 +1,15 @@
+package academia;
+import java.util.Scanner;
+
+public class Academia {
+    private int alunos;
+    private int acessos;
+
+    public Academia() {
+
+    }
+
+    public void atualiza(int x) {
+    
+    }
+}
