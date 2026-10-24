@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praia Clube - Painel de Partidas</title>
+
+    <!-- SDK Oficial do Supabase via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 30px;
+            color: #333;
+        }
+
+        h1 {
+            color: #d97706;
+            /* Amarelo/Laranja Praia Clube */
+            border-bottom: 2px solid #d97706;
+            padding-bottom: 10px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        th {
+            background-color: #f8fafc;
+            color: #475569;
+            font-weight: bold;
+        }
+
+        tr:hover {
+            background-color: #f1f5f9;
+        }
+
+        .placar {
+            font-weight: bold;
+            color: #0284c7;
+        }
+
+        .loading {
+            font-style: italic;
+            color: #64748b;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>🏐 Praia Clube - Partidas Cadastradas</h1>
+        <p id="status" class="loading">Carregando partidas do banco de dados...</p>
+
+        <table id="tabela-partidas" style="display: none;">
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Competição</th>
+                    <th>Adversário</th>
+                    <th>Mando</th>
+                    <th>Cidade / Ginásio</th>
+                    <th>Placar (Praia x Adv)</th>
+                </tr>
+            </thead>
+            <tbody id="corpo-tabela">
+                <!-- Os dados serão inseridos aqui via JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // -------------------------------------------------------------------
+        // 1. CONEXÃO COM O SUPABASE
+        // Substitua os dois campos abaixo com os dados do seu projeto no Supabase
+        // -------------------------------------------------------------------
+        // 1. O endereço do seu projeto (começando com https://)
+        const SUPABASE_URL = 'https://pyhfnkofrddvozbvinih.supabase.co';
+
+        // 2. A chave PÚBLICA (Publishable / Anon) — NUNCA use a que começa com sb_secret_!
+        const SUPABASE_ANON_KEY = 'sb_publishable_egwOqwx0HQ9w0zU8_OPrOA_bgn4XjXp';
+        // Inicializa o cliente do Supabase
+        const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+        // -------------------------------------------------------------------
+        // 2. FUNÇÃO PARA BUSCAR E EXIBIR OS DADOS
+        // -------------------------------------------------------------------
+        async function carregarPartidas() {
+            const statusElement = document.getElementById('status');
+            const tabelaElement = document.getElementById('tabela-partidas');
+            const corpoTabela = document.getElementById('corpo-tabela');
+
+            try {
+                // Busca todas as partidas trazendo o nome do adversário e da competição
+                const { data: partidas, error } = await supabaseClient
+                    .from('partidas')
+                    .select(`
+                        id,
+                        data_partida,
+                        mando,
+                        cidade,
+                        ginasio,
+                        sets_time,
+                        sets_adversario,
+                        adversarios(time),
+                        competicoes(nome)
+                    `)
+                    .order('data_partida', { ascending: false });
+
+                if (error) throw error;
+
+                if (!partidas || partidas.length === 0) {
+                    statusElement.innerText = "Nenhuma partida cadastrada ainda.";
+                    return;
+                }
+
+                // Esconde a mensagem de carregamento e exibe a tabela
+                statusElement.style.display = 'none';
+                tabelaElement.style.display = 'table';
+
+                // Preenche as linhas da tabela
+                corpoTabela.innerHTML = partidas.map(p => `
+                    <tr>
+                        <td>${new Date(p.data_partida).toLocaleDateString('pt-BR')}</td>
+                        <td>${p.competicoes ? p.competicoes.nome : '-'}</td>
+                        <td><strong>${p.adversarios ? p.adversarios.time : '-'}</strong></td>
+                        <td>${p.mando.toUpperCase()}</td>
+                        <td>${p.cidade} (${p.ginasio || 'Não informado'})</td>
+                        <td class="placar">${p.sets_time} x ${p.sets_adversario}</td>
+                    </tr>
+                `).join('');
+
+            } catch (err) {
+                console.error("Erro ao buscar dados:", err);
+                statusElement.innerText = "Erro ao carregar dados do Supabase. Verifique o console.";
+                statusElement.style.color = "red";
+            }
+        }
+
+        // Executa a busca ao carregar a página
+        carregarPartidas();
+    </script>
+</body>
+
+</html>

@@ -1,27 +1,32 @@
 package academia;
 
-import java.util.Random; // classe para fazer sorteios númericos 
+import java.util.Random;
 
 public class Utilitaria {
+
     public static String geraCodigo() {
         Random random = new Random();
-        StringBuilder codigoGerado = new StringBuilder();
+        StringBuilder codigo = new StringBuilder();
 
         for (int i = 0; i < 3; i++) {
-            char codLetra = (char) ('A' + random.nextInt(26)); // na tabela ASCI o A vale 65, entao eu somo ao numero sorteado entre 0 e 25, que vira 65-90;
-            codigoGerado.append(codLetra);
+            char letra = (char) ('a' + random.nextInt(26));
+            codigo.append(letra);
         }
 
-        for (int j = 0; j < 2; j++) {
-            int codNumero = random.nextInt(10);
-            codigoGerado.append(codNumero);
+        for (int i = 0; i < 2; i++) {
+            int digito = random.nextInt(10);
+            codigo.append(digito);
         }
 
-        return codigoGerado.toString();
+        return codigo.toString();
     }
 
     public static boolean validaTel(String tel) {
-        String regex = "3([1-5]|[7-9])9[8-9][0-9]{7}";
+        if (tel == null) {
+            return false;
+        }
+        
+        String regex = "^\\(3[1-57-9]\\) 9[89][0-9]{3}-[0-9]{4}$";
         return tel.matches(regex);
     }
 }
