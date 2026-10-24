@@ -8,15 +8,17 @@ import java.util.Scanner;
 
 public class App {
 
-    private static final String[] USUARIOS = {"aquila", "ygor", "gustavo"};
+    // o private é um Encapsulamento | restringe o acesso a esses vetores para que sejam visiveis e acessiveis apenas dentro da propria classe App
+
+    private static final String[] USUARIOS = {"aquila", "ygor", "gustavo"}; // atributo, uma qualidade da classe App
     private static final String[] SENHAS = {"123", "123", "123"};
 
     public static void menu() {
-        System.out.println("\nMENU");
-        System.out.println("1- ACADEMIA");
-        System.out.println("2- PERSONAL");
-        System.out.println("3- SAIR");
-        System.out.print("DIGITE A OPÇÃO: ");
+        System.out.println("\n---- | Menu | ---- ");
+        System.out.println("1 - Academia");
+        System.out.println("2 - Personal");
+        System.out.println("3 - Sair");
+        System.out.print("Digite a opção: ");
     }
 
     private static boolean autenticarFuncionario(Scanner s) {
@@ -34,9 +36,9 @@ public class App {
             }
 
             tentativas++;
-            System.out.println("Login invalido!");
+            System.out.println("Login invalido! Senha ou usuário incorreta.");
             if (tentativas >= 3) {
-                System.out.println("Numero de tentativas esgotou!");
+                System.out.println("Numero de tentativas esgotadas!");
             }
         }
         return false;
@@ -59,11 +61,11 @@ public class App {
                     if (autenticarFuncionario(s)) {
                         char opSub = '0';
                         do {
-                            System.out.println("\nSub MENU");
-                            System.out.println("1- CADASTRO");
-                            System.out.println("2- RELATÓRIO");
-                            System.out.println("3- VOLTAR");
-                            System.out.print("DIGITE A OPÇÃO: ");
+                            System.out.println("\n---- | Sub Menu | ----");
+                            System.out.println("1 - Cadastro");
+                            System.out.println("2 - Relatório");
+                            System.out.println("3 - Voltar");
+                            System.out.print("Digite a opção: ");
 
                             String entSub = s.nextLine();
                             if (entSub.isEmpty()) continue;
@@ -76,8 +78,8 @@ public class App {
                                 while (!nomeValido) {
                                     System.out.print("Nome do aluno: ");
                                     nome = s.nextLine();
-
                                     boolean existe = false;
+
                                     for (Aluno a : listaAlunos) {
                                         if (a.getNome().equalsIgnoreCase(nome)) {
                                             existe = true;
@@ -86,7 +88,7 @@ public class App {
                                     }
 
                                     if (existe) {
-                                        System.out.println("Nome ja cadastrado! Tente outro.");
+                                        System.out.println("Nome já cadastrado! Tente outro.");
                                     } else {
                                         nomeValido = true;
                                     }
